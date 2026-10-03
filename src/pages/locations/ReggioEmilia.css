@@ -1,0 +1,293 @@
+/* ReggioEmilia.css */
+.reggio-page {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--bg-color);
+}
+
+.reggio-hero {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop") center/cover no-repeat;
+  color: white;
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.reggio-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.reggio-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reggio-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.reggio-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 400;
+  color: var(--secondary);
+  letter-spacing: 1px;
+}
+
+/* Sections */
+.reggio-section {
+  padding: 6rem 0;
+}
+
+.reggio-section-alt {
+  background-color: var(--bg-soft);
+  padding: 6rem 0;
+}
+
+.reggio-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.reggio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 992px) {
+  .reggio-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.reggio-text-block h2 {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reggio-text-block h3 {
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.reggio-text-block h4 {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.reggio-text-block p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+.reggio-text-block ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.reggio-text-block ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #4a5568;
+}
+
+.reggio-text-block ul li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  top: -2px;
+}
+
+/* Info Cards Grid */
+.reggio-info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: -6rem auto 4rem;
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+}
+
+.reggio-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  border-bottom: 5px solid var(--secondary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reggio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(40,54,24,0.12);
+}
+
+.reggio-card-icon {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.reggio-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.reggio-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Custom Table for Calendar */
+.reggio-table-wrapper {
+  overflow-x: auto;
+  margin: 3rem 0;
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.reggio-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.reggio-table th, .reggio-table td {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.05rem;
+}
+
+.reggio-table th {
+  background-color: var(--primary);
+  color: white;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.reggio-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reggio-table tbody tr:hover {
+  background-color: var(--bg-soft);
+}
+
+/* Images Row */
+.reggio-image-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .reggio-image-row {
+    flex-direction: row;
+  }
+}
+
+.reggio-image-row img {
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border: 6px solid white;
+  transition: transform 0.4s ease;
+}
+
+.reggio-image-row img:hover {
+  transform: scale(1.02);
+}
+
+/* Sidebar Widgets */
+.reggio-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reggio-contact-widget {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  border-top: 5px solid var(--primary);
+}
+
+.reggio-contact-widget h3 {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-date {
+  background-color: var(--bg-soft);
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 1.5rem 0;
+  border: 2px dashed var(--secondary);
+  font-size: 1.1rem;
+}
+
+/* Profile Section */
+.reggio-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .reggio-profile {
+    flex-direction: row;
+  }
+}

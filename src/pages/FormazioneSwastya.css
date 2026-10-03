@@ -1,0 +1,171 @@
+.swastya-page {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--bg-color);
+}
+
+.swastya-hero {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop") center/cover no-repeat;
+  color: white;
+  padding: 10rem 2rem 8rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.swastya-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(40, 54, 24, 0.8), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.swastya-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.swastya-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.swastya-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #deb853; /* secondary golden color */
+  font-style: italic;
+}
+
+.swastya-section {
+  padding: 6rem 0;
+  background-color: #FAFAFA;
+}
+
+.swastya-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.swastya-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.swastya-intro h2 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.swastya-intro p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.swastya-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.swastya-feature-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-bottom: 4px solid var(--secondary);
+}
+
+.swastya-feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-icon {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.swastya-feature-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.swastya-feature-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Logos Section */
+.swastya-logos-section {
+  background: white;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  margin-bottom: 5rem;
+}
+
+.swastya-logos-section h3 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.swastya-logos-section p {
+  color: #4a5568;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.swastya-logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.swastya-logo-img {
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.swastya-logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* CTA */
+.swastya-cta {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--bg-soft);
+  border-radius: 16px;
+  border: 1px dashed var(--secondary);
+}
+
+.swastya-cta p {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
