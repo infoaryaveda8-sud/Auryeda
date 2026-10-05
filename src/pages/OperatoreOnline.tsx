@@ -20,11 +20,13 @@ const OperatoreOnline = () => {
             <AlertCircle size={60} className="wip-icon" />
             <h2>Pagina in Allestimento</h2>
             <p className="wip-message">
-              Al momento questa pagina è in fase di aggiornamento. Ci dispiace per il disagio. 
-              Tuttavia, potete scaricare tutte le informazioni relative al corso tramite il pulsante qui sotto.
+              Al momento questa Pagina è incompleta ci dispiace ma per le informazioni a riguardo la danza del ventre clicate il link di seguito. per maggiori informazioni contantateci via la nostra pagina Contatti.
             </p>
             
             <div className="wip-actions">
+              <p className="namaste-text">Namastè</p>
+              <h3 className="click-below-text">CLICCA QUI SOTTO!</h3>
+              
               <a 
                 href="https://corsimassaggiomilano.it/wp-content/uploads/2026/07/Formazione-online-2026-1.pdf" 
                 target="_blank" 
@@ -32,16 +34,14 @@ const OperatoreOnline = () => {
                 className="btn btn-primary wip-btn"
               >
                 <FileText size={20} className="btn-icon" />
-                Scarica Formazione Online 2026 (PDF)
+                Formazione online 2026
               </a>
 
               <Link to="/contact" className="btn btn-outline wip-btn mt-3">
                 <Mail size={20} className="btn-icon" />
-                Contattaci per maggiori info
+                Pagina Contatti
               </Link>
             </div>
-
-            <p className="namaste-text">Namastè 🙏</p>
           </div>
         </div>
       </section>

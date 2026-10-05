@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, Globe } from 'lucide-react';
 import { FaFacebookF, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa';
 import logoImg from '../assets/logo-arya-bianco.jpg.jpeg';
 
@@ -16,6 +16,27 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleLanguage = () => {
+    const getCookie = (name: string) => {
+      const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      if (match) return decodeURIComponent(match[2]);
+      return null;
+    };
+    
+    const setCookie = (name: string, value: string) => {
+      document.cookie = `${name}=${value};path=/`;
+      document.cookie = `${name}=${value};path=/;domain=${window.location.hostname}`;
+    };
+
+    const currentLang = getCookie('googtrans');
+    if (currentLang === '/it/en') {
+      setCookie('googtrans', '/it/it');
+    } else {
+      setCookie('googtrans', '/it/en');
+    }
+    window.location.reload();
+  };
+
   return (
     <>
       {/* Janani-style Golden Top Bar */}
@@ -24,7 +45,7 @@ const Header = () => {
           <div className="top-bar-links" style={{ fontSize: '0.8rem', fontWeight: 500, opacity: 0.9 }}>
             <span style={{ cursor: 'pointer' }}>Iscriviti alla Newsletter</span>
             <span style={{ cursor: 'pointer' }}>Multimedia</span>
-            <span style={{ cursor: 'pointer' }}>Blog</span>
+            <Link to="/blog" style={{ cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}>Blog</Link>
             <Link to="/contact" style={{ cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}>Contatti</Link>
           </div>
           <div className="top-bar-socials">
@@ -35,6 +56,10 @@ const Header = () => {
             <span style={{ margin: '0 8px', opacity: 0.5 }}>|</span>
             <Phone size={14} style={{ cursor: 'pointer' }} />
             <Mail size={14} style={{ cursor: 'pointer' }} />
+            <span style={{ margin: '0 8px', opacity: 0.5 }}>|</span>
+            <span onClick={toggleLanguage} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 'bold' }}>
+              <Globe size={14} /> EN/IT
+            </span>
           </div>
         </div>
       </div>
@@ -71,14 +96,15 @@ const Header = () => {
                 </div>
               </div>
               <div className="nav-dropdown-container" style={{ position: 'relative' }}>
-                <a href="#" className="nav-link" style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>VISITE AYURVEDA E TERAPIE</a>
+                <Link to="/visite-terapie" className={`nav-link${location.pathname === '/visite-terapie' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>VISITE AYURVEDA E TERAPIE</Link>
                 <div className="nav-dropdown">
-                  <a href="#">CONSULTI DELLA DR.SSA SADBHAWNA CON LA TECNICA AYURVEDA DEL NADI PARIKSHA</a>
-                  <a href="#">TRATTAMENTI AYURVEDA</a>
+                  <Link to="/consulti-sadbhawna">CONSULTI DELLA DR.SSA SADBHAWNA CON LA TECNICA AYURVEDA DEL NADI PARIKSHA</Link>
+                  <Link to="/trattamenti-ayurveda">TRATTAMENTI AYURVEDA</Link>
                 </div>
               </div>
+              <Link to="/blog" className={`nav-link${location.pathname === '/blog' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>BLOG</Link>
               <Link to="/contact" className={`nav-link${location.pathname === '/contact' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>CONTATTI</Link>
-              <a href="#" className="nav-link" style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary)', whiteSpace: 'nowrap' }}>PRAKRITI TEST</a>
+              <Link to="/prakriti-test" className={`nav-link${location.pathname === '/prakriti-test' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary)', whiteSpace: 'nowrap' }}>PRAKRITI TEST</Link>
             </div>
           </nav>
         </div>

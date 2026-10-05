@@ -108,5 +108,21 @@
   font-size: 1.5rem;
   color: var(--secondary);
   font-style: italic;
-  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.click-below-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
 }
