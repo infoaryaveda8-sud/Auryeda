@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './PrakritiTest.css';
 import { Download } from 'lucide-react';
-import { FaCheckCircle } from 'react-icons/fa';
+
 
 type Dosha = 'vata' | 'pitta' | 'kapha';
 
@@ -312,7 +312,7 @@ const PrakritiTest = () => {
               <p className="instruction">Seleziona un'opzione per ciascuna delle {questions.length} domande.</p>
             </div>
 
-            <div className="quiz-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            <div className="quiz-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
               {questions.map((q) => (
                 <div key={q.id} className="quiz-question" style={{ marginBottom: 0, padding: '1.5rem', background: '#fcfaf7', borderRadius: '12px', border: '1px solid #efe8df' }}>
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--primary)' }}>{q.text}</h3>
