@@ -6,7 +6,7 @@ const ContactForm: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-subtitle">Mettiti in contatto</span>
-          <h2 className="section-title">Richiedi Informazioni</h2>
+          <h2 className="section-title notranslate" translate="no">Richiedi Informazioni</h2>
         </div>
         
         <div style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: '#fff', padding: '3rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>

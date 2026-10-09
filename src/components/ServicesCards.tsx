@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const ServicesCards: React.FC = () => {
@@ -21,9 +22,9 @@ const ServicesCards: React.FC = () => {
               <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop" alt="Massaggio Ayurvedico" className="service-img" />
             </div>
             <div className="service-content">
-              <h3 className="service-title">Corso Intensivo di Massaggio</h3>
+              <h3 className="service-title" translate="no">Corso Intensivo di Massaggio</h3>
               <p className="service-desc">Un corso dinamico e altamente pratico, studiato per padroneggiare le tecniche fondamentali dell'Ayurveda in breve tempo senza rinunciare alla qualità.</p>
-              <a href="#" className="service-link">Scopri di Più <ArrowRight size={16} /></a>
+              <Link to="/corsi-viaggi" translate="no" className="service-link notranslate">Scopri di più <ArrowRight size={16} /></Link>
             </div>
           </div>
 
@@ -34,9 +35,9 @@ const ServicesCards: React.FC = () => {
               <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop" alt="Accademia Ayurveda" className="service-img" />
             </div>
             <div className="service-content">
-              <h3 className="service-title">Accademia Ayurveda</h3>
+              <h3 className="service-title" translate="no">Accademia Ayurveda</h3>
               <p className="service-desc">Percorso completo di Ayurveda, teoria, filosofia e medicina, basato su due anni con rilascio di attestazione professionale. Presso sedi Arya Veda.</p>
-              <a href="#" className="service-link">Scopri di Più <ArrowRight size={16} /></a>
+              <Link to="/accademia" translate="no" className="service-link notranslate">Scopri di più <ArrowRight size={16} /></Link>
             </div>
           </div>
 
@@ -47,9 +48,9 @@ const ServicesCards: React.FC = () => {
               <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=2073&auto=format&fit=crop" alt="Consulti Vaidya" className="service-img" />
             </div>
             <div className="service-content">
-              <h3 className="service-title">Consulti con Vaidya</h3>
+              <h3 className="service-title" translate="no">Consulti con Vaidya</h3>
               <p className="service-desc">Trattamenti benessere con operatori certificati e consulti personalizzati dal Dr. Bhardwaj, Vaidya della tradizione Ayurveda indiana.</p>
-              <a href="#" className="service-link">Scopri di Più <ArrowRight size={16} /></a>
+              <Link to="/consulti-sadbhawna" translate="no" className="service-link notranslate">Scopri di più <ArrowRight size={16} /></Link>
             </div>
           </div>
         </div>

@@ -130,8 +130,9 @@ const ConsultiSadbhawna = () => {
                 <h4>A Milano presso: Scuola Arya Veda</h4>
                 <p>Via Teocrito 50 (Ang. Via Cirenei)</p>
                 <p className="text-sm">400 mt da MM1 GORLA, 500 mt da MM1 PRECOTTO</p>
-                <div className="contact-links mt-3">
+                <div className="contact-links mt-3" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <a href="tel:+393405865469" className="contact-link"><Phone size={16}/> 3405865469 (Dr.Sadbhawna)</a>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--primary)', margin: 0 }}>Ogni Lunedì e Martedì - per info- 3928191230 or 3405865469</p>
                 </div>
               </div>
               

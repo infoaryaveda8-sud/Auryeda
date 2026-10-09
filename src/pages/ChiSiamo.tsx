@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Award, Users, BookOpen, Heart, Star, Globe } from 'lucide-react';
 import './ChiSiamo.css';
 
@@ -47,12 +47,12 @@ const teachers = [
 ];
 
 const historyGallery = [
-  { img: imgKapilSadbhawna, caption: 'Dott.ssa Sadbhawna e Kapil Bhardwaj' },
-  { img: imgAcademy1, caption: 'Nella nostra tradizione' },
-  { img: imgAcademy2, caption: 'Dr. Arun Bhardwaj e Famiglia' },
-  { img: imgMeeting, caption: 'Incontri con i Maestri' },
-  { img: imgConsultation, caption: 'Consulenza Nadi Pariksha' },
-  { img: imgEvent, caption: 'Eventi Culturali Ayurveda' },
+  { img: imgKapilSadbhawna, caption: 'Dott.ssa Sadbhawna e Dott. Rajesh Kotecha' },
+  { img: imgAcademy1, caption: 'Dr.ssa Sadbhawna col Maestro S.V. Govindan' },
+  { img: imgAcademy2, caption: 'Dr.ssa Sadbhawna & Dott. Vasant Lad' },
+  { img: imgMeeting, caption: "Con l'ex calciatore e allenatore Gennaro Gattuso" },
+  { img: imgConsultation, caption: 'Consulenza con l’attrice Elena Di Cioccio' },
+  { img: imgEvent, caption: 'Thea Crudi with Dott. Sadbhawna Bhardwaj' },
   { img: imgHaridwar, caption: 'Pellegrinaggio ad Haridwar' },
 ];
 

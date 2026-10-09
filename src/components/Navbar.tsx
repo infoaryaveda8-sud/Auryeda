@@ -20,7 +20,7 @@ const Navbar = () => {
         </Link>
 
         <nav className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/" translate="no" className="nav-link notranslate" onClick={() => setIsOpen(false)}><span translate="no" className="notranslate">Home</span></Link>
           <Link to="/chi-siamo" className="nav-link" onClick={() => setIsOpen(false)}>Chi siamo</Link>
           <Link to="/corsi" className="nav-link" onClick={() => setIsOpen(false)}>Corsi & Viaggi</Link>
           

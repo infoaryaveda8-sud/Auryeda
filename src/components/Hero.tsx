@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import slide1 from '../assets/AYURVEDA-SLIDER-2.jpg';
 import slide2 from '../assets/slide2.jpg';
@@ -71,8 +72,8 @@ const Hero = () => {
         <h1 className="hero-title">Shree Arya Bhushan</h1>
         <p className="hero-desc">Guidandoti verso il benessere olistico attraverso l'antica saggezza dell'Ayurveda.</p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-          <button className="btn btn-primary">Incontra Acharyaji</button>
-          <button className="btn btn-outline" style={{ color: '#fff', borderColor: '#fff' }}>Prenota Consulto</button>
+          <Link to="/chi-siamo" className="btn btn-primary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Nostro Mentore Acharyaji</Link>
+          <Link to="/consulti-sadbhawna" className="btn btn-outline" style={{ color: '#fff', borderColor: '#fff', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Prenota Consulto</Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 import './CorsiViaggi.css';
 
@@ -13,6 +13,8 @@ import imgYoga from '../assets/mariele-carnevale-yoga-600x387.jpeg';
 import imgMichelangelo from '../assets/image-27-01-22-18-28-e1645054300407.jpg';
 import imgPanchakarma from '../assets/D94AD18B-8C1A-4947-B001-406B9FD9C691-600x387.jpg';
 import imgCertificates from '../assets/IMG_1911.jpg';
+import pdfPanchakarma from '../assets/Panchakarma_Detox_Cascina San Carlo_Offerta.pdf';
+import pdfGoa from '../assets/Capodanno a Mumbai PDF.pdf';
 
 const eventiData = [
   {
@@ -31,7 +33,8 @@ const eventiData = [
     location: 'Goa, India',
     img: imgGoa,
     date: '29 Dic - 07 Gen 2027',
-    desc: 'Un viaggio trasformativo per iniziare il nuovo anno all\'insegna del benessere totale.'
+    desc: 'Un viaggio trasformativo per iniziare il nuovo anno all\'insegna del benessere totale.',
+    pdf: pdfGoa
   },
   {
     id: 3,
@@ -48,7 +51,7 @@ const eventiData = [
     category: 'Viaggi',
     location: 'Nord India',
     img: imgTourIndia,
-    date: '14 - 27 Agosto 2026',
+    date: '14 - 27 Agosto 2025',
     desc: 'Un percorso spirituale profondo nei luoghi sacri dell\'India settentrionale.'
   },
   {
@@ -57,7 +60,7 @@ const eventiData = [
     category: 'Corsi',
     location: 'Milano, Italia',
     img: imgHeadMassage,
-    date: '07-09 Agosto 2026',
+    date: '07-09 Agosto 2027',
     desc: 'Intensivo pratico per operatori: approfondimento delle tecniche avanzate.'
   },
   {
@@ -66,14 +69,14 @@ const eventiData = [
     category: 'Corsi',
     location: 'Milano, Italia',
     img: imgBamboo,
-    date: '08-09 Agosto 2026',
+    date: '08-09 Agosto 2027',
     desc: 'Apprendi l\'arte del massaggio decontratturante con l\'uso delle canne di bambù.'
   },
   {
     id: 7,
     title: 'Hatha Yoga & Nidra con Mariele Carnevale',
     category: 'Yoga',
-    location: 'Centro AIMA',
+    location: 'Centro Arya Veda',
     img: imgYoga,
     date: 'Ogni Mercoledì',
     desc: 'Pratica settimanale per riequilibrare corpo e mente attraverso posture e rilassamento profondo.'
@@ -82,7 +85,7 @@ const eventiData = [
     id: 8,
     title: 'Corsi di Qi-Gong 2026/2027',
     category: 'Corsi',
-    location: 'Centro AIMA',
+    location: 'Centro Arya Veda',
     img: imgMichelangelo,
     date: 'Stagione 2026/27',
     desc: 'Disciplina e salute in perfetta sintonia. Pratica zen marziale per l\'energia vitale.'
@@ -94,7 +97,8 @@ const eventiData = [
     location: 'Italia / India',
     img: imgPanchakarma,
     date: 'Programmazione 2026',
-    desc: 'Percorso intensivo di depurazione fisica e mentale secondo i principi antichi.'
+    desc: 'Percorso intensivo di depurazione fisica e mentale secondo i principi antichi.',
+    pdf: pdfPanchakarma
   },
   {
     id: 10,
@@ -170,10 +174,13 @@ const CorsiViaggi = () => {
       <section className="cv-grid-section container">
         <div className="cv-grid">
           {filteredEventi.map((evento, index) => (
-            <div 
+            <a 
+              href={(evento as any).pdf ? (evento as any).pdf : "#dettagli"} 
+              target={(evento as any).pdf ? "_blank" : "_self"} 
+              rel="noopener noreferrer" 
               className="cv-card cv-reveal" 
               key={evento.id}
-              style={{ transitionDelay: `${(index % 3) * 100}ms` }}
+              style={{ transitionDelay: `${(index % 3) * 100}ms`, textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
               <div className="cv-card-img-wrap">
                 <img src={evento.img} alt={evento.title} className="cv-card-img" />
@@ -192,11 +199,11 @@ const CorsiViaggi = () => {
                 </div>
                 <h3 className="cv-card-title">{evento.title}</h3>
                 <p className="cv-card-desc">{evento.desc}</p>
-                <a href="#dettagli" className="cv-card-link">
+                <div className="cv-card-link">
                   Scopri di più <ArrowRight size={16} className="cv-arrow-icon" />
-                </a>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         

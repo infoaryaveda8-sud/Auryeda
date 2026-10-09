@@ -76,7 +76,7 @@ const Header = () => {
           <nav className="main-nav" style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', alignItems: 'flex-end', marginLeft: 'auto' }}>
             {/* Top Row: 4 links */}
             <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-              <Link to="/" className={`nav-link${location.pathname === '/' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>HOME</Link>
+              <Link to="/" translate="no" className={`nav-link notranslate${location.pathname === '/' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}><span translate="no" className="notranslate">HOME</span></Link>
               <Link to="/chi-siamo" className={`nav-link${location.pathname === '/chi-siamo' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>CHI SIAMO</Link>
               <Link to="/corsi-viaggi" className={`nav-link${location.pathname === '/corsi-viaggi' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>CORSI & VIAGGI IN INDIA 2026/27</Link>
               <div className="nav-dropdown-container" style={{ position: 'relative' }}>

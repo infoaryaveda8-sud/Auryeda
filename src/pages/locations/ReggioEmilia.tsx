@@ -102,9 +102,10 @@ const ReggioEmilia = () => {
                     <Phone size={18} style={{ marginRight: '8px' }} />
                     340 5865469 (Anche WhatsApp)
                   </a>
-                  <a href="mailto:infoayurvedaima@gmail.com" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-light)', margin: '-0.5rem 0 0.5rem 0' }}>Ogni Lunedì e Martedì - per info- 3928191230 or 3405865469</p>
+                  <a href="mailto:infoaryaveda8@gmail.com" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Mail size={18} style={{ marginRight: '8px' }} />
-                    infoayurvedaima@gmail.com
+                    infoaryaveda8@gmail.com
                   </a>
                 </div>
               </div>
@@ -123,7 +124,7 @@ const ReggioEmilia = () => {
                 </ul>
                 
                 <p style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: 'var(--text-light)', fontStyle: 'italic' }}>
-                  Le domande di iscrizione e richiesta borse di studio andranno fatte in sede o via mail, tramite appositi moduli da richiedere all'indirizzo infoayurvedaima@gmail.com
+                  Le domande di iscrizione e richiesta borse di studio andranno fatte in sede o via mail, tramite appositi moduli da richiedere all'indirizzo infoaryaveda8@gmail.com
                 </p>
               </div>
             </div>

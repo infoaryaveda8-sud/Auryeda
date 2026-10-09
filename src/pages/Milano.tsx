@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { MapPin, Calendar, Clock, Award, CheckCircle2, ChevronDown, BookOpen, HeartHandshake } from 'lucide-react';
 import './Milano.css';
 import schemaImg from '../assets/SCHEMA-TRIENNALE-AYURVEDA.jpg';
@@ -374,7 +374,7 @@ const Milano = () => {
               <h3 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>Borse di Studio</h3>
               <p style={{ color: 'var(--text-light)', lineHeight: 1.8, fontSize: '0.95rem' }}>
                 Il percorso biennale destinerà <strong>5 borse di studio</strong> per ogni anno accademico a giovani inoccupati ed ex lavoratori in cerca di riqualificazione (copertura 25% iscrizione, 15% retta mensile).<br/><br/>
-                <strong>Requisiti:</strong> Maggiore età, disoccupati, precari o part-time; donne in rientro lavorativo post-maternità. Reddito massimo nucleo familiare 28.000,00 Euro. Richiedi i moduli a <em>infoayurvedaima@gmail.com</em>.
+                <strong>Requisiti:</strong> Maggiore età, disoccupati, precari o part-time; donne in rientro lavorativo post-maternità. Reddito massimo nucleo familiare 28.000,00 Euro. Richiedi i moduli a <em>infoaryaveda8@gmail.com</em>.
               </p>
             </div>
           </div>
@@ -411,6 +411,7 @@ const Milano = () => {
             <button className="btn btn-primary">Richiedi Informazioni</button>
             <button className="btn" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff' }}>WhatsApp: 3405865469</button>
           </div>
+          <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.9rem', color: '#fff' }}>Ogni Lunedì e Martedì - per info- 3928191230 or 3405865469</p>
         </div>
       </section>
     </div>

@@ -74,7 +74,7 @@ const Contact = () => {
             <Mail size={35} />
           </div>
           <h3>EMAIL</h3>
-          <p>infoayurvedaima@gmail.com</p>
+          <p><a href="mailto:infoaryaveda8@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>infoaryaveda8@gmail.com</a></p>
         </div>
         
         <div className="premium-info-card">
@@ -91,7 +91,7 @@ const Contact = () => {
         
         {/* Left Side: Premium Form */}
         <div className="form-container">
-          <h2 className="section-title">Richiedi Informazioni</h2>
+          <h2 className="section-title notranslate" translate="no">Richiedi Informazioni</h2>
           
           <form className="premium-form" onSubmit={handleSubmit}>
             <div className="input-group">
@@ -128,7 +128,6 @@ const Contact = () => {
               </label>
             </div>
 
-            <p style={{fontSize: '0.85rem', color: '#94A3B8', marginBottom: '1.5rem'}}>* Campi obbligatori</p>
             
             {submitStatus === 'success' && (
               <div style={{ backgroundColor: '#10B981', color: 'white', padding: '1rem', borderRadius: '8px', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -200,11 +199,11 @@ const Contact = () => {
           <div className="hospitality-banner">
             <Bed size={40} style={{marginBottom: '1rem', color: 'var(--secondary)'}} />
             <h3>OSPITALITÀ</h3>
-            <p><strong>AIMA AYURVEDA ha pensato a chi viene da lontano.</strong></p>
+            <p><strong>Arya Veda ha pensato a chi viene da lontano.</strong></p>
             <p>Offriamo ospitalità semplice e gratuita presso la nostra struttura (portando un sacco a pelo), oppure convenzioni con B&B, hotel e ostelli della zona.</p>
             <p style={{marginTop: '1.5rem', fontWeight: 600}}>
               Richiedi la lista delle strutture convenzionate a:<br/>
-              <a href="mailto:infoayurvedaima@gmail.com" style={{color: 'var(--secondary)', textDecoration: 'none'}}>infoayurvedaima@gmail.com</a>
+              <a href="mailto:infoaryaveda8@gmail.com" style={{color: 'var(--secondary)', textDecoration: 'none'}}>infoaryaveda8@gmail.com</a>
             </p>
           </div>
         </div>
@@ -218,7 +217,7 @@ const Contact = () => {
           className="contact-map-premium" 
           allowFullScreen={false} 
           loading="lazy" 
-          title="Mappa Sede AIMA Ayurveda">
+          title="Mappa Sede Arya Veda">
         </iframe>
       </div>
 

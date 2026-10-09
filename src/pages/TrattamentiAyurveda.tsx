@@ -27,10 +27,10 @@ const TrattamentiAyurveda = () => {
             <div className="content-text">
               <h2 className="section-heading">L.A.B. - Aperto a tutti</h2>
               <p>
-                Il Centro AIMA asd, dalla lunga esperienza di formazione nell’ambito dell’operatore tecnico del benessere in Ayurveda, ha creato <strong>L.A.B.: Laboratorio Ayurvedico di Benessere</strong>, aperto a tutti.
+                Il Centro Arya Veda asd, dalla lunga esperienza di formazione nell’ambito dell’operatore tecnico del benessere in Ayurveda, ha creato <strong>L.A.B.: Laboratorio Ayurvedico di Benessere</strong>, aperto a tutti.
               </p>
               <p>
-                I Nostri migliori Operatori Accreditati & Certificati presso la sede del centro AIMA di Milano sita in via Teocrito 50, propongono trattamenti e massaggi personalizzati tutti intorno a Te, nello stile dell’approccio olistico suggerito dalla Antica Medicina Ayurvedica indiana.
+                I Nostri migliori Operatori Accreditati & Certificati presso la sede del centro Arya Veda di Milano sita in via Teocrito 50, propongono trattamenti e massaggi personalizzati tutti intorno a Te, nello stile dell’approccio olistico suggerito dalla Antica Medicina Ayurvedica indiana.
               </p>
               <p>
                 Il progetto L.A.B. nasce con la stessa passione e tradizione con cui abbiamo sempre formato i Ns operatori. Non siamo un centro massaggi o una SPA, ci poniamo come associazione nel panorama olistico che diffonde ed opera nel campo dei trattamenti orientali legati alla tradizione indiana dell’Ayurveda.
@@ -80,6 +80,7 @@ const TrattamentiAyurveda = () => {
                 <div>
                   <strong>3405865469</strong>
                   <p>ANCHE WHATSAPP</p>
+                  <p className="mt-2" style={{ fontSize: '0.9rem', color: 'var(--primary)' }}>Ogni Lunedì e Martedì - per info- 3928191230 or 3405865469</p>
                 </div>
               </div>
               <div className="info-item">
