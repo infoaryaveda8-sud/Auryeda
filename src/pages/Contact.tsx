@@ -14,8 +14,7 @@ const Contact = () => {
     
     const formData = new FormData(event.currentTarget);
 
-    // Ye access key hai, aapko ise web3forms.com se li hui key se replace karna hoga
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "f4fb1de0-5612-4743-8b27-1e929c525eec");
 
     const object: Record<string, any> = {};
     formData.forEach((value, key) => {
