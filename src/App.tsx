@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -15,12 +16,22 @@ import TrattamentiAyurveda from './pages/TrattamentiAyurveda';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import PrakritiTest from './pages/PrakritiTest';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import WhatsAppButton from './components/WhatsAppButton';
 import './App.css';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="app">
         <Header />
         <Routes>
@@ -38,6 +49,7 @@ function App() {
           <Route path="/prakriti-test" element={<PrakritiTest />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <WhatsAppButton />
         <Footer />

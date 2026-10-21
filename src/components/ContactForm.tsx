@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ContactForm: React.FC = () => {
   return (
@@ -23,7 +24,9 @@ const ContactForm: React.FC = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.85rem', marginTop: '1rem', color: 'var(--text-light)' }}>
               <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                 <input type="checkbox" required style={{ marginTop: '3px' }} />
-                Dichiaro di aver letto l'informativa sulla privacy e acconsento al trattamento dei dati
+                <span>
+                  Dichiaro di aver letto l'<Link to="/privacy-policy" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>informativa sulla privacy</Link> e acconsento al trattamento dei dati personali (GDPR UE 2016/679)*
+                </span>
               </label>
               <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                 <input type="checkbox" required style={{ marginTop: '3px' }} />

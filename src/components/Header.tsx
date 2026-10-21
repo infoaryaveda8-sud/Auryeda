@@ -43,8 +43,6 @@ const Header = () => {
       <div className="top-bar">
         <div className="container top-bar-content">
           <div className="top-bar-links" style={{ fontSize: '0.8rem', fontWeight: 500, opacity: 0.9 }}>
-            <span style={{ cursor: 'pointer' }}>Iscriviti alla Newsletter</span>
-            <span style={{ cursor: 'pointer' }}>Multimedia</span>
             <Link to="/blog" style={{ cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}>Blog</Link>
             <Link to="/contact" style={{ cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}>Contatti</Link>
           </div>

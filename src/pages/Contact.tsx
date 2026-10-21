@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Plane, Train, Car, Bed, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import './Contact.css';
 
@@ -117,7 +118,7 @@ const Contact = () => {
             <div className="checkbox-wrapper">
               <input type="checkbox" name="privacy_accepted" id="privacy-policy" required />
               <label htmlFor="privacy-policy">
-                Ho letto e accetto l'<a href="#">Informativa</a> relativa al Trattamento dei Dati Personali ai sensi del Regolamento UE 2016/679 artt. 13 e 14*
+                Ho letto e accetto l'<Link to="/privacy-policy" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Informativa</Link> relativa al Trattamento dei Dati Personali ai sensi del Regolamento UE 2016/679 artt. 13 e 14*
               </label>
             </div>
 

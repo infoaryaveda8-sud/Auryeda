@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Static Ayurvedic Hero Banner (Single Image, No Sliding, No Arrows)
+   ========================================================================== */
+
+.static-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  padding: 4.5rem 1rem 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.static-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 1;
+  filter: brightness(0.85);
+  transform: scale(1.01);
+  transition: transform 6s ease;
+}
+
+.static-hero-section:hover .static-hero-bg {
+  transform: scale(1.04);
+}
+
+.static-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 12, 10, 0.40) 0%,
+    rgba(15, 12, 10, 0.65) 50%,
+    rgba(15, 12, 10, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+.static-hero-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.static-hero-content {
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 880px;
+  padding: 0 1rem;
+}
+
+.static-hero-subtitle {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.static-hero-subtitle::before,
+.static-hero-subtitle::after {
+  content: '—';
+  margin: 0 10px;
+  opacity: 0.7;
+}
+
+.static-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  letter-spacing: -0.5px;
+}
+
+.static-hero-desc {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.94);
+  margin: 0 auto 2.5rem auto;
+  max-width: 740px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.static-hero-buttons {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn-mentor {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  padding: 0.95rem 2.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(148, 58, 57, 0.4);
+  transition: var(--transition-smooth);
+}
+
+.hero-btn-mentor:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(148, 58, 57, 0.6);
+}
+
+.hero-btn-consult {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  padding: 0.95rem 2.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+}
+
+.hero-btn-consult:hover {
+  background-color: #FFFFFF;
+  color: var(--primary);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .static-hero-section {
+    min-height: 480px;
+    height: 60vh;
+  }
+
+  .static-hero-title {
+    font-size: 2.7rem;
+  }
+
+  .static-hero-desc {
+    font-size: 1.05rem;
+  }
+
+  .static-hero-buttons {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .hero-btn-mentor,
+  .hero-btn-consult {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}
