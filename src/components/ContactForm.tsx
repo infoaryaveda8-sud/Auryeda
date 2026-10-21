@@ -15,20 +15,10 @@ const ContactForm: React.FC = () => {
     const formData = new FormData(formElement);
     formData.append("access_key", "f4fb1de0-5612-4743-8b27-1e929c525eec");
 
-    const object: Record<string, any> = {};
-    formData.forEach((value, key) => {
-      object[key] = value;
-    });
-    const json = JSON.stringify(object);
-
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
+        body: formData
       });
 
       const result = await response.json();
