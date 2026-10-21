@@ -48,12 +48,40 @@ const Header = () => {
           </div>
           <div className="top-bar-socials">
             <span style={{ cursor: 'pointer', fontSize: '1rem' }}><FaFacebookF /></span>
-            <span style={{ cursor: 'pointer', fontSize: '1.1rem' }}><FaLinkedinIn /></span>
-            <span style={{ cursor: 'pointer', fontSize: '1.2rem' }}><FaYoutube /></span>
-            <span style={{ cursor: 'pointer', fontSize: '1.1rem' }}><FaInstagram /></span>
+            <a 
+              href="https://www.linkedin.com/in/dr-meenu-sadbhawna-bhardwaj-47703447" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'inherit', display: 'inline-flex', alignItems: 'center', fontSize: '1.1rem' }}
+              title="LinkedIn - Dr. Meenu Sadbhawna Bhardwaj"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a 
+              href="https://www.youtube.com/@SadbhawnaBhardwaj-n3o" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'inherit', display: 'inline-flex', alignItems: 'center', fontSize: '1.2rem' }}
+              title="YouTube"
+            >
+              <FaYoutube />
+            </a>
+            <a 
+              href="https://www.instagram.com/sadbhawna_bhardwaj?dlrf=Z2YybWhrZHRkNTdj" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'inherit', display: 'inline-flex', alignItems: 'center', fontSize: '1.1rem' }}
+              title="Instagram"
+            >
+              <FaInstagram />
+            </a>
             <span style={{ margin: '0 8px', opacity: 0.5 }}>|</span>
-            <Phone size={14} style={{ cursor: 'pointer' }} />
-            <Mail size={14} style={{ cursor: 'pointer' }} />
+            <a href="tel:+393405865469" style={{ color: 'inherit', display: 'inline-flex', alignItems: 'center' }} title="+39 340 586 5469">
+              <Phone size={14} />
+            </a>
+            <a href="mailto:infoaryaveda8@gmail.com" style={{ color: 'inherit', display: 'inline-flex', alignItems: 'center' }} title="infoaryaveda8@gmail.com">
+              <Mail size={14} />
+            </a>
             <span style={{ margin: '0 8px', opacity: 0.5 }}>|</span>
             <span onClick={toggleLanguage} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 'bold' }}>
               <Globe size={14} /> EN/IT

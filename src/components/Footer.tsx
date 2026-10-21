@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Heart, MapPin, Mail, Phone } from 'lucide-react';
+import { FaYoutube, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -58,6 +59,41 @@ const Footer: React.FC = () => {
                 <Mail size={16} color="var(--secondary)" style={{ flexShrink: 0 }} />
                 <a href="mailto:infoaryaveda8@gmail.com" style={{ color: '#E7E5E4', textDecoration: 'none' }}>
                   infoaryaveda8@gmail.com
+                </a>
+              </div>
+              <div style={{ display: 'flex', gap: '1rem', marginTop: '0.6rem', alignItems: 'center' }}>
+                <a 
+                  href="https://www.linkedin.com/in/dr-meenu-sadbhawna-bhardwaj-47703447" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ color: '#E7E5E4', fontSize: '1.15rem', transition: 'color 0.2s' }}
+                  onMouseOver={(e) => e.currentTarget.style.color = '#0A66C2'}
+                  onMouseOut={(e) => e.currentTarget.style.color = '#E7E5E4'}
+                  title="LinkedIn - Dr. Meenu Sadbhawna Bhardwaj"
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a 
+                  href="https://www.youtube.com/@SadbhawnaBhardwaj-n3o" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ color: '#E7E5E4', fontSize: '1.25rem', transition: 'color 0.2s' }}
+                  onMouseOver={(e) => e.currentTarget.style.color = '#EF4444'}
+                  onMouseOut={(e) => e.currentTarget.style.color = '#E7E5E4'}
+                  title="YouTube - Sadbhawna Bhardwaj"
+                >
+                  <FaYoutube />
+                </a>
+                <a 
+                  href="https://www.instagram.com/sadbhawna_bhardwaj?dlrf=Z2YybWhrZHRkNTdj" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ color: '#E7E5E4', fontSize: '1.15rem', transition: 'color 0.2s' }}
+                  onMouseOver={(e) => e.currentTarget.style.color = '#E1306C'}
+                  onMouseOut={(e) => e.currentTarget.style.color = '#E7E5E4'}
+                  title="Instagram - sadbhawna_bhardwaj"
+                >
+                  <FaInstagram />
                 </a>
               </div>
             </div>
