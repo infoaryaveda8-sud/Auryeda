@@ -47,7 +47,15 @@ const Header = () => {
             <Link to="/contact" style={{ cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}>Contatti</Link>
           </div>
           <div className="top-bar-socials">
-            <span style={{ cursor: 'pointer', fontSize: '1rem' }}><FaFacebookF /></span>
+            <a 
+              href="https://www.facebook.com/profile.php?id=61593292162520" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'inherit', display: 'inline-flex', alignItems: 'center', fontSize: '1rem' }}
+              title="Facebook"
+            >
+              <FaFacebookF />
+            </a>
             <a 
               href="https://www.linkedin.com/in/dr-meenu-sadbhawna-bhardwaj-47703447" 
               target="_blank" 

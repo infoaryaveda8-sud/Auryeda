@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Heart, MapPin, Mail, Phone } from 'lucide-react';
-import { FaYoutube, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaYoutube, FaInstagram, FaLinkedinIn, FaFacebookF } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -62,6 +62,17 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               <div style={{ display: 'flex', gap: '1rem', marginTop: '0.6rem', alignItems: 'center' }}>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61593292162520" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ color: '#E7E5E4', fontSize: '1.15rem', transition: 'color 0.2s' }}
+                  onMouseOver={(e) => e.currentTarget.style.color = '#1877F2'}
+                  onMouseOut={(e) => e.currentTarget.style.color = '#E7E5E4'}
+                  title="Facebook"
+                >
+                  <FaFacebookF />
+                </a>
                 <a 
                   href="https://www.linkedin.com/in/dr-meenu-sadbhawna-bhardwaj-47703447" 
                   target="_blank" 
