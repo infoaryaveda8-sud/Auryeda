@@ -106,41 +106,12 @@ const ChiSiamo = () => {
               <a href="/corsi" className="cs-cta-link">Scopri i nostri corsi <span className="cs-arrow">→</span></a>
             </div>
             <div className="cs-mission-visual reveal reveal-right">
-              <div className="cs-trio-showcase">
-                <div className="cs-trio-top-row">
-                  {/* Dr.ssa Sadbhawna */}
-                  <div className="cs-trio-card">
-                    <div className="cs-trio-img-wrap">
-                      <img src={imgSadbhawna} alt="Dr.ssa Sadbhawna Bhardwaj" className="cs-trio-img" />
-                    </div>
-                    <div className="cs-trio-info">
-                      <h4 className="cs-trio-name">Dr.ssa Sadbhawna Bhardwaj</h4>
-                      <span className="cs-trio-role">Medico Ayurveda BAMS</span>
-                    </div>
-                  </div>
-
-                  {/* Dr. Arya Bhushan */}
-                  <div className="cs-trio-card">
-                    <div className="cs-trio-img-wrap">
-                      <img src={imgAryaBhushan} alt="Dr. Arya Bhushan Bhardwaj" className="cs-trio-img" />
-                    </div>
-                    <div className="cs-trio-info">
-                      <h4 className="cs-trio-name">Dr. Arya Bhushan Bhardwaj</h4>
-                      <span className="cs-trio-role">Maestro Tradizionale</span>
-                    </div>
-                  </div>
+              <div className="cs-mission-imgs">
+                <div className="cs-imgs-row">
+                  <img src={imgSadbhawna} alt="Dr.ssa Sadbhawna Bhardwaj" className="cs-pure-img cs-img-sadbhawna" />
+                  <img src={imgAryaBhushan} alt="Dr. Arya Bhushan Bhardwaj" className="cs-pure-img cs-img-aryabhushan" />
                 </div>
-
-                {/* Bottom wide card: Kapil Bhardwaj */}
-                <div className="cs-trio-card cs-trio-card-wide">
-                  <div className="cs-trio-img-wrap cs-img-wrap-wide">
-                    <img src={imgKapil} alt="Kapil Bhardwaj" className="cs-trio-img" />
-                  </div>
-                  <div className="cs-trio-info">
-                    <h4 className="cs-trio-name">Kapil Bhardwaj</h4>
-                    <span className="cs-trio-role">Osteopata & Istruttore Ayurveda</span>
-                  </div>
-                </div>
+                <img src={imgKapil} alt="Kapil Bhardwaj" className="cs-pure-img cs-img-kapil" />
               </div>
             </div>
           </div>
