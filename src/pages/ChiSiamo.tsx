@@ -9,8 +9,8 @@ import imgAcademy2 from '../assets/IMG_1114-300x225.jpg';
 import imgKapilSadbhawna from '../assets/IMG_2365.jpg';
 import imgEvent from '../assets/IMG_8363.jpg';
 import imgSadbhawna from '../assets/minu.png';
-import imgKapil from '../assets/WhatsApp-Image-2026-07-12-at-17.54.31.jpeg';
-import imgHaridwar from '../assets/WhatsApp-Image-2026-07-12-at-21.16.06.jpeg';
+import imgAryaBhushan from '../assets/WhatsApp-Image-2026-07-12-at-17.54.31.jpeg';
+import imgKapil from '../assets/WhatsApp-Image-2026-07-12-at-21.16.06.jpeg';
 import imgMeeting from '../assets/WhatsApp-Image-2026-07-27-at-20.35.28-1.jpeg';
 
 const values = [
@@ -44,6 +44,13 @@ const teachers = [
     bio: "Osteopata diplomato e profondo conoscitore della medicina tradizionale indiana. Conduce workshops e seminari integrando l'osteopatia con le pratiche ayurvediche.",
     tag: 'Osteopata & Istruttore',
   },
+  {
+    img: imgAryaBhushan,
+    name: 'Dr. Arya Bhushan Bhardwaj',
+    role: 'Maestro Tradizionale & Guida',
+    bio: "Pioniere della diffusione dell'Ayurveda e delle scienze olistiche indiane in Italia e nel mondo, ispiratore dei principi e della missione di Aryaveda.",
+    tag: 'Maestro Tradizionale',
+  },
 ];
 
 const historyGallery = [
@@ -53,7 +60,7 @@ const historyGallery = [
   { img: imgMeeting, caption: "Con l'ex calciatore e allenatore Gennaro Gattuso" },
   { img: imgConsultation, caption: 'Consulenza con l’attrice Elena Di Cioccio' },
   { img: imgEvent, caption: 'Thea Crudi with Dott. Sadbhawna Bhardwaj' },
-  { img: imgHaridwar, caption: 'Pellegrinaggio ad Haridwar' },
+  { img: imgKapil, caption: 'Pellegrinaggio ad Haridwar' },
 ];
 
 const ChiSiamo = () => {
@@ -91,21 +98,38 @@ const ChiSiamo = () => {
           <div className="cs-mission-grid">
             <div className="cs-mission-text reveal">
               <span className="cs-label">La nostra Missione</span>
-              <h2 className="cs-h2">Obiettivi e Scopi di <span className="cs-gold">AIMA</span>,<br /><em>scuola massaggio ayurveda milano</em></h2>
+              <h2 className="cs-h2">Obiettivi e Scopi di <span className="cs-gold">Aryaveda</span>,<br /><em>scuola massaggio ayurveda milano</em></h2>
               <div className="cs-divider" />
               <p>Fondata con la missione di diffondere la millenaria saggezza dell Ayurveda in Italia, l Associazione Culturale <strong>Aryaveda A.C.</strong> e oggi un punto di riferimento per chi cerca una formazione autentica e di alta qualita nel campo delle discipline olistiche.</p>
               <p>Il nostro approccio unisce l antica conoscenza vedica con le esigenze della vita moderna, offrendo percorsi che non sono solo professionalizzanti, ma anche veri e propri viaggi di trasformazione personale.</p>
-              <p><strong>AIMA</strong>, scuola di massaggio ayurvedico con sede a Milano, si distingue per la qualita degli insegnanti e per la profondita dei programmi didattici che coprono dall Abhyanga classico alle tecniche diagnostiche del Nadi Pariksha.</p>
-              <a href="/corsi" className="cs-cta-link">Scopri i nostri corsi <span className="cs-arrow">to</span></a>
+              <p><strong>Aryaveda</strong>, scuola di massaggio ayurvedico con sede a Milano, si distingue per la qualita degli insegnanti e per la profondita dei programmi didattici che coprono dall Abhyanga classico alle tecniche diagnostiche del Nadi Pariksha.</p>
+              <a href="/corsi" className="cs-cta-link">Scopri i nostri corsi <span className="cs-arrow">→</span></a>
             </div>
             <div className="cs-mission-visual reveal reveal-right">
-              <div className="cs-img-stack">
-                <img src={imgKapilSadbhawna} alt="I fondatori" className="cs-img-main" />
-                <div className="cs-img-badge">
-                  <div className="cs-badge-icon">Om</div>
-                  <div className="cs-badge-text"><strong>Dal 2008</strong><span>Milano, Italia</span></div>
+              <div className="cs-trio-showcase">
+                <div className="cs-trio-card cs-trio-primary">
+                  <img src={imgSadbhawna} alt="Dr.ssa Sadbhawna Bhardwaj" className="cs-trio-img" />
+                  <div className="cs-trio-overlay">
+                    <span className="cs-trio-name">Dr.ssa Sadbhawna Bhardwaj</span>
+                    <span className="cs-trio-role">Medico Ayurveda BAMS</span>
+                  </div>
                 </div>
-                <img src={imgConsultation} alt="Consulenza" className="cs-img-secondary" />
+                <div className="cs-trio-column">
+                  <div className="cs-trio-card cs-trio-secondary">
+                    <img src={imgAryaBhushan} alt="Dr. Arya Bhushan Bhardwaj" className="cs-trio-img" />
+                    <div className="cs-trio-overlay">
+                      <span className="cs-trio-name">Dr. Arya Bhushan Bhardwaj</span>
+                      <span className="cs-trio-role">Maestro Tradizionale</span>
+                    </div>
+                  </div>
+                  <div className="cs-trio-card cs-trio-secondary">
+                    <img src={imgKapil} alt="Kapil Bhardwaj" className="cs-trio-img cs-img-kapil" />
+                    <div className="cs-trio-overlay">
+                      <span className="cs-trio-name">Kapil Bhardwaj</span>
+                      <span className="cs-trio-role">Osteopata & Istruttore</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
