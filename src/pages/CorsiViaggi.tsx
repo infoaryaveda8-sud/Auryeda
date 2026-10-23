@@ -15,6 +15,7 @@ import imgPanchakarma from '../assets/D94AD18B-8C1A-4947-B001-406B9FD9C691-600x3
 import imgCertificates from '../assets/IMG_1911.jpg';
 import pdfPanchakarma from '../assets/Panchakarma_Detox_Cascina San Carlo_Offerta.pdf';
 import pdfGoa from '../assets/Capodanno a Mumbai PDF.pdf';
+import pdfRishikesh from '../assets/rishikesh programma .pdf';
 
 const eventiData = [
   {
@@ -47,12 +48,13 @@ const eventiData = [
   },
   {
     id: 4,
-    title: 'Ritiro in Ashram: Haridwar, Delhi & Rishikesh',
+    title: 'Ritiro nell\'Ashram: Haridwar, Delhi e Rishikesh',
     category: 'Viaggi',
-    location: 'Nord India',
+    location: 'India settentrionale',
     img: imgTourIndia,
-    date: '14 - 27 Agosto 2025',
-    desc: 'Un percorso spirituale profondo nei luoghi sacri dell\'India settentrionale.'
+    date: '14 - 27 Agosto 2027',
+    desc: 'Un percorso spirituale profondo nei luoghi sacri dell\'India settentrionale.',
+    pdf: pdfRishikesh
   },
   {
     id: 5,
