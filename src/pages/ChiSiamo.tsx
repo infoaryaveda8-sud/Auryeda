@@ -103,7 +103,7 @@ const ChiSiamo = () => {
               <p>Fondata con la missione di diffondere la millenaria saggezza dell Ayurveda in Italia, l Associazione Culturale <strong>Aryaveda A.C.</strong> e oggi un punto di riferimento per chi cerca una formazione autentica e di alta qualita nel campo delle discipline olistiche.</p>
               <p>Il nostro approccio unisce l antica conoscenza vedica con le esigenze della vita moderna, offrendo percorsi che non sono solo professionalizzanti, ma anche veri e propri viaggi di trasformazione personale.</p>
               <p><strong>Aryaveda</strong>, scuola di massaggio ayurvedico con sede a Milano, si distingue per la qualita degli insegnanti e per la profondita dei programmi didattici che coprono dall Abhyanga classico alle tecniche diagnostiche del Nadi Pariksha.</p>
-              <a href="/corsi" className="cs-cta-link">Scopri i nostri corsi <span className="cs-arrow">→</span></a>
+              <a href="https://corsimassaggiomilano.it/corso-ayurveda-tradizionale-a-livelli-con-attestato-2027-28/" target="_blank" rel="noopener noreferrer" className="cs-cta-link">Scopri i nostri corsi <span className="cs-arrow">→</span></a>
             </div>
             <div className="cs-mission-visual reveal reveal-right">
               <div className="cs-mission-imgs">
@@ -191,8 +191,8 @@ const ChiSiamo = () => {
           <h2>Unisciti alla Famiglia Aryaveda</h2>
           <p>Scopri i nostri corsi, prenota una consulenza Ayurveda o partecipa ai nostri eventi. Il benessere autentico inizia qui.</p>
           <div className="cs-banner-btns">
-            <a href="/corsi" className="btn btn-primary">Scopri i Corsi</a>
-            <a href="/contatti" className="cs-btn-ghost">Contattaci</a>
+            <a href="https://corsimassaggiomilano.it/corso-ayurveda-tradizionale-a-livelli-con-attestato-2027-28/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Scopri i Corsi</a>
+            <a href="/contact" className="cs-btn-ghost">Contattaci</a>
           </div>
         </div>
       </section>

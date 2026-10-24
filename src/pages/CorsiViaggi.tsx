@@ -25,7 +25,8 @@ const eventiData = [
     location: 'Milano, Italia',
     img: imgGroup1,
     date: 'Inizio Autunno 2026',
-    desc: 'Formazione completa strutturata a moduli per apprendere le tecniche tradizionali ayurvediche.'
+    desc: 'Formazione completa strutturata a moduli per apprendere le tecniche tradizionali ayurvediche.',
+    link: 'https://corsimassaggiomilano.it/corso-ayurveda-tradizionale-a-livelli-con-attestato-2027-28/'
   },
   {
     id: 2,
@@ -76,7 +77,7 @@ const eventiData = [
   },
   {
     id: 7,
-    title: 'Hatha Yoga & Nidra con Mariele Carnevale',
+    title: 'Hatha Yoga & Nidra',
     category: 'Yoga',
     location: 'Centro Arya Veda',
     img: imgYoga,
@@ -109,7 +110,8 @@ const eventiData = [
     location: 'Milano, Italia',
     img: imgCertificates,
     date: 'Iscrizioni Aperte',
-    desc: 'Il nostro corso di punta per diventare operatori ayurvedici certificati.'
+    desc: 'Il nostro corso di punta per diventare operatori ayurvedici certificati.',
+    link: 'https://corsimassaggiomilano.it/corso-ayurveda-tradizionale-a-livelli-con-attestato-2027-28/'
   }
 ];
 
@@ -177,8 +179,8 @@ const CorsiViaggi = () => {
         <div className="cv-grid">
           {filteredEventi.map((evento, index) => (
             <a 
-              href={(evento as any).pdf ? (evento as any).pdf : "#dettagli"} 
-              target={(evento as any).pdf ? "_blank" : "_self"} 
+              href={(evento as any).link || (evento as any).pdf || "#dettagli"} 
+              target={(evento as any).link || (evento as any).pdf ? "_blank" : "_self"} 
               rel="noopener noreferrer" 
               className="cv-card cv-reveal" 
               key={evento.id}

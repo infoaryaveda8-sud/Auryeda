@@ -92,7 +92,7 @@ const ReggioEmilia = () => {
                 <h3>Open Day & Iscrizioni</h3>
                 <p style={{ color: 'var(--text-light)', fontSize: '0.95rem' }}>INCONTRO E PRESENTAZIONE UFFICIALE CORSO CON I DOCENTI PRESSO LA NUOVA SEDE DI REGGIO EMILIA</p>
                 <div className="event-date">
-                  SABATO 26 SETTEMBRE<br/>
+                  SABATO 28 NOVEMBRE<br/>
                   <span style={{ color: 'var(--primary)', fontWeight: 'bold' }}>OPEN DAY 14.30 – 18.00</span>
                 </div>
                 <p style={{ fontWeight: '500' }}>ENTRATA LIBERA<br/>GRADITA LA PRENOTAZIONE</p>
@@ -108,24 +108,6 @@ const ReggioEmilia = () => {
                     infoaryaveda8@gmail.com
                   </a>
                 </div>
-              </div>
-
-              <div className="reggio-widget" style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', borderLeft: '5px solid var(--secondary)', boxShadow: 'var(--shadow-sm)'}}>
-                <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem', fontFamily: 'var(--font-heading)', fontSize: '1.8rem' }}>Borse di Studio</h3>
-                <p style={{ marginBottom: '1rem', color: '#4a5568', lineHeight: '1.6' }}>Il percorso triennale di Ayurveda destinerà <strong>nr. 5 borse di studio</strong> per ogni anno accademico a favore di giovani inoccupati ed ex lavoratori/trici che desiderano riqualificarsi professionalmente intraprendendo la professione di Operatore Tecnico del Benessere in Ayurveda (terapista massaggiatore della tradizione indiana).</p>
-                <p style={{ marginBottom: '1.5rem', color: '#4a5568' }}><strong>Copertura:</strong> 25% (1/3) della quota d’iscrizione ed il 15% della retta mensile.</p>
-                
-                <h4 style={{ color: 'var(--text-main)', fontSize: '1.2rem', marginBottom: '1rem' }}>Requisiti per l'accesso:</h4>
-                <ul style={{ paddingLeft: '1.2rem', fontSize: '0.95rem', color: '#4a5568', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <li>Maggiore età</li>
-                  <li>Essere senza lavoro, avere un lavoro precario o part-time (si richiede documentazione)</li>
-                  <li>Donne che desiderano riprendere il loro posto nella società dopo essere state mamme</li>
-                  <li>Reddito massimo del nucleo familiare 28.000,00 Euro</li>
-                </ul>
-                
-                <p style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: 'var(--text-light)', fontStyle: 'italic' }}>
-                  Le domande di iscrizione e richiesta borse di studio andranno fatte in sede o via mail, tramite appositi moduli da richiedere all'indirizzo infoaryaveda8@gmail.com
-                </p>
               </div>
             </div>
           </div>
@@ -152,7 +134,7 @@ const ReggioEmilia = () => {
               </thead>
               <tbody>
                 <tr style={{ backgroundColor: 'rgba(148, 58, 57, 0.08)' }}>
-                  <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>PRIMO ANNO - ACCADEMIA AYURVEDA AIMA</strong></td>
+                  <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>PRIMO ANNO - ACCADEMIA AYURVEDA ARYAVEDA</strong></td>
                 </tr>
                 <tr><td>10-11</td><td>GEN</td><td>2026</td><td>Introduzione teoria Ayurveda. Sanscrito base per operatori. Snehana -1</td></tr>
                 <tr><td>14-15</td><td>FEB</td><td>2026</td><td>Dosha e Subdosha Snehana-2</td></tr>
@@ -166,7 +148,7 @@ const ReggioEmilia = () => {
                 <tr><td>28-29</td><td>NOV</td><td>2026</td><td>Muriabhyangam 1, manipolazioni articolare e sistema muscolo -scheletrico e principali malattie.</td></tr>
                 
                 <tr style={{ backgroundColor: 'rgba(148, 58, 57, 0.08)' }}>
-                  <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>SECONDO ANNO - ACCADEMIA AYURVEDA AIMA</strong></td>
+                  <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>SECONDO ANNO - ACCADEMIA AYURVEDA ARYAVEDA</strong></td>
                 </tr>
                 <tr><td>30-31</td><td>GEN</td><td>2027</td><td>Pindasweda e Varianti e massaggio pranico</td></tr>
                 <tr><td>27-28</td><td>FEB</td><td>2027</td><td>Kalahari massage con i piedi. sequenze manuali per la circolazione Nala e Nadi Abhyangam riscaldanti e decontratturanti.</td></tr>
@@ -180,10 +162,10 @@ const ReggioEmilia = () => {
                 <tr><td>20-21</td><td>NOV</td><td>2027</td><td>Muriabhyangam 2, manipolazioni articolare e sistema muscolo -scheletrico e principali malattie. Pratica e Test</td></tr>
                 
                 <tr style={{ backgroundColor: 'rgba(148, 58, 57, 0.08)' }}>
-                  <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>MASTER TERZO ANNO - ACCADEMIA AYURVEDA AIMA</strong></td>
+                  <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>MASTER TERZO ANNO - ACCADEMIA AYURVEDA ARYAVEDA</strong></td>
                 </tr>
                 <tr><td>29-30</td><td>GEN</td><td>2028</td><td>Dhara, Shirodhara, Nasya Sarvang abhyangam 7 posizioni</td></tr>
-                <tr><td>19-20</td><td>FEB</td><td>2028</td><td>Pratyasth: miofasciale ayurvedico olistico metodo Aima, con bendaggi riducenti</td></tr>
+                <tr><td>19-20</td><td>FEB</td><td>2028</td><td>Pratyasth: miofasciale ayurvedico olistico metodo Aryaveda, con bendaggi riducenti</td></tr>
                 <tr><td>18-19</td><td>MAR</td><td>2028</td><td>Garbhayangam & Balaabhyangam massaggio neonatale e massaggio della donna in dolce attesa, yoga e alimentazione in gravidanza</td></tr>
                 <tr><td>22-23</td><td>APR</td><td>2028</td><td>Manas Abhyangam Anatomia del sistema nervoso. Ayurveda e la mente, psicologia ayurvedica .</td></tr>
                 <tr><td>20-21</td><td>MAG</td><td>2028</td><td>Udgharshan, Udvartanam, Ubtan trattamenti con polveri erbali, peeling e maschere naturali curative.</td></tr>
@@ -211,12 +193,12 @@ const ReggioEmilia = () => {
             <div style={{ flex: 1 }}>
               <h2 className="reggio-title" style={{ fontSize: '2.5rem', color: 'var(--primary)', marginBottom: '1.5rem', textTransform: 'none', letterSpacing: 'normal' }}>I Nostri Docenti</h2>
               <p style={{ fontSize: '1.1rem', color: '#4a5568', lineHeight: '1.8' }}>
-                Percorso tenuto da Istruttori certificati di esperienza ultra decennale e dalla <strong>Dr.ssa indiana Sadbhawna Bhardwaj</strong>, Vaidya & Responsabile Didattica Formazione AIMA Ayurveda.
+                Percorso tenuto da Istruttori certificati di esperienza ultra decennale e dalla <strong>Dr.ssa indiana Sadbhawna Bhardwaj</strong>, Vaidya & Responsabile Didattica Formazione Aryaveda.
               </p>
               
               <h3 style={{ color: 'var(--accent)', marginTop: '2.5rem', marginBottom: '1rem', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}>Breve CV della Dr.ssa Bhardwaj</h3>
               <p style={{ lineHeight: '1.8', color: '#4a5568', marginBottom: '1rem' }}>
-                Nata a New Delhi nel 1974. Responsabile didattica dei corsi di formazione per AIMA Ayurveda Italia. Ha conseguito laurea all’Università di Delhi, Diplomi di Naturopatia, Yoga e Digitopressione. È iscritta alla Gandhi National Academy of Naturopathy, per la pratica della medicina naturale.
+                Nata a New Delhi nel 1974. Responsabile didattica dei corsi di formazione per Aryaveda Italia. Ha conseguito laurea all’Università di Delhi, Diplomi di Naturopatia, Yoga e Digitopressione. È iscritta alla Gandhi National Academy of Naturopathy, per la pratica della medicina naturale.
               </p>
               <p style={{ lineHeight: '1.8', color: '#4a5568' }}>
                 È specializzata in <strong>ABHYANGAM E SNEHANA</strong>, l’antica arte del massaggio curativo dei Vaidya indiani e <strong>PANCHAKARMA</strong>, la scienza trattamenti di purificazione organica di corpo e mente e riequilibranti della salute; riceve su appuntamento per consulenze di medicina Ayurveda col tradizionale sistema di valutazione <strong>NADI PARIKSHA</strong> (valutazione diagnostica non clinica, mediante auscultazione del polso), LIFESTYLE AND WELLNESS COACH.
@@ -242,8 +224,8 @@ const ReggioEmilia = () => {
               </div>
               
               <p style={{ fontSize: '0.9rem', color: 'var(--text-light)', lineHeight: '1.7', backgroundColor: 'rgba(255,255,255,0.5)', padding: '1.5rem', borderRadius: '8px' }}>
-                Il certificato delle scuole AIMA Ayurveda e SEM Mininni è riconosciuto ai sensi della <strong>Legge 4/2013</strong> in Italia. 
-                Si aggiorna in diploma nazionale <strong>ASI Arti Olistiche</strong> con la frequenza del terzo anno ed è riconoscibile da tutte le enti nazionali a delega CONI, rilasciando il tesserino tecnico che permette l’iscrizione all’albo nazionale.<br/><br/>
+                Il certificato delle scuole Aryaveda e SEM Mininni è riconosciuto ai sensi della <strong>Legge 4/2013</strong> in Italia. 
+                Si aggiorna in diploma nazionale <strong>OPES Arti Olistiche</strong> con la frequenza del terzo anno ed è riconoscibile da tutte le enti nazionali a delega CONI, rilasciando il tesserino tecnico che permette l’iscrizione all’albo nazionale.<br/><br/>
                 I nostri Operatori certificati possono lavorare anche all’estero grazie alla certificazione internazionale.
               </p>
             </div>

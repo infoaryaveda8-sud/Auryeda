@@ -107,22 +107,22 @@ const Header = () => {
           </div>
           
           {/* Nav links on the right - split into 4 top, 4 bottom */}
-          <nav className="main-nav" style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', alignItems: 'flex-end', marginLeft: 'auto' }}>
+          <nav className="main-nav" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-end', marginLeft: 'auto' }}>
             {/* Top Row: 4 links */}
-            <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', position: 'relative', zIndex: 30 }}>
               <Link to="/" translate="no" className={`nav-link notranslate${location.pathname === '/' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}><span translate="no" className="notranslate">HOME</span></Link>
               <Link to="/chi-siamo" className={`nav-link${location.pathname === '/chi-siamo' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>CHI SIAMO</Link>
               <Link to="/corsi-viaggi" className={`nav-link${location.pathname === '/corsi-viaggi' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>CORSI & VIAGGI IN INDIA 2026/27</Link>
-              <div className="nav-dropdown-container" style={{ position: 'relative' }}>
-                <Link to="/accademia" className={`nav-link${location.pathname === '/accademia' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>ACCADEMIA AYURVEDA</Link>
-                <div className="nav-dropdown">
+              <div className="nav-dropdown-container" style={{ position: 'relative', zIndex: 40 }}>
+                <Link to="/accademia" className={`nav-link${location.pathname === '/accademia' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap', cursor: 'pointer' }}>ACCADEMIA AYURVEDA</Link>
+                <div className="nav-dropdown" style={{ right: 0, left: 'auto' }}>
                   <Link to="/milano">MILANO</Link>
                   <Link to="/reggio-emilia">REGGIO EMILIA</Link>
                 </div>
               </div>
             </div>
-            {/* Bottom Row: 4 links */}
-            <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
+            {/* Bottom Row: 5 links */}
+            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', position: 'relative', zIndex: 10 }}>
               <div className="nav-dropdown-container" style={{ position: 'relative' }}>
                 <Link to="/operatore-online" className={`nav-link${location.pathname === '/operatore-online' ? ' active' : ''}`} style={{ fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap' }}>OPERATORE AYURVEDA INTENSIVO ONLINE (WIP)</Link>
                 <div className="nav-dropdown">

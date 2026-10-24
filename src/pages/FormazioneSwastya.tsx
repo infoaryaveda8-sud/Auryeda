@@ -1,7 +1,7 @@
 import { Sparkles, Heart, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './FormazioneSwastya.css';
-import logoAima from '../assets/logo-aima-finale-scaled.jpg';
+import logoAryaveda from '../assets/logo-arya-bianco.jpg.jpeg';
 import logoAsi from '../assets/logo_ASI_settore-300x300.png.webp';
 
 const FormazioneSwastya = () => {
@@ -51,7 +51,7 @@ const FormazioneSwastya = () => {
             <h3>I Nostri Riconoscimenti e Certificazioni</h3>
             <p>Il nostro percorso di formazione è supportato e riconosciuto dai migliori enti del settore olistico.</p>
             <div className="swastya-logos-grid">
-              <img src={logoAima} alt="Logo AIMA" className="swastya-logo-img" />
+              <img src={logoAryaveda} alt="Logo Aryaveda" className="swastya-logo-img" />
               <img src={logoAsi} alt="Logo ASI Settore" className="swastya-logo-img" />
             </div>
           </div>

@@ -36,7 +36,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  min-height: 90px;
+  height: auto;
+  padding: 8px 0;
 }
 
 .logo {
@@ -95,6 +97,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .nav-dropdown {
@@ -106,6 +109,7 @@
   box-shadow: var(--shadow-lg);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transform: translateY(15px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 4px;

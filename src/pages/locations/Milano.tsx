@@ -17,7 +17,7 @@ const Milano = () => {
           <div className="content-grid">
             <div className="main-content">
               <h2 className="h2 text-primary">Accademia Triennale Ayurveda, Massaggi Tradizionali e Rituali Olistici</h2>
-              <h4 className="subtitle">PERCORSO PROFESSIONALE COMPLETO E RICONOSCIUTO, DIPLOMA ASI NAZIONALE-ENTE CONI</h4>
+              <h4 className="subtitle">PERCORSO PROFESSIONALE COMPLETO E RICONOSCIUTO, DIPLOMA OPES NAZIONALE-ENTE CONI</h4>
               
               <div className="text-content mt-4">
                 <p><strong>L’Ayurveda</strong> è probabilmente la dottrina medica più antica al mondo e medicina ufficiale nel sub-continente indiano. L’Ayurveda è medicina di grande esperienza, con le sue preparazioni naturali che spaziano nella ricerca terapeutica di tutto ciò che sta nel Creato, i suoi famosissimi trattamenti corpo quali massaggi, trattamenti di fomentazione e colate di oli cosiddetti medicati apprezzati in tutto il mondo.</p>
@@ -39,7 +39,7 @@ const Milano = () => {
                 <div className="info-card">
                   <Award className="icon text-primary" size={32} />
                   <h3>Certificazione</h3>
-                  <p>Diploma ASI Nazionale - CONI</p>
+                  <p>Diploma OPES Nazionale - CONI</p>
                 </div>
               </div>
 

@@ -38,7 +38,7 @@ const calendarioData = [
     title: "3° ANNO (2028)",
     items: [
       { date: "15-16 GEN 2028", desc: "Dhara, shirodhara, nasya e tutte le varianti. Sarvang abhyangam delle 7 posizioni" },
-      { date: "05-06 FEB 2028", desc: "Pratyasth-miofasciale Ayurvedic olistico metodo AIMA, con bendaggi riducenti." },
+      { date: "05-06 FEB 2028", desc: "Pratyasth-miofasciale Ayurvedic olistico metodo Aryaveda, con bendaggi riducenti." },
       { date: "04-05 MAR 2028", desc: "Garbhyangam & Balaabhyangam massaggio neonata e massaggio donna in dolce attesa." },
       { date: "01-02 APR 2028", desc: "Manas Abhyangam Anatomia del sistema nervoso. Ayurveda e mente psicologia ayurvedica." },
       { date: "06-07 MAG 2028", desc: "Udgharshana, Udvartanam, Ubtan trattamenti con polveri erbali, peeling." },
@@ -77,7 +77,7 @@ const calendarioTejas = [
       { date: "", desc: "16-17 GEN 2027: riflessologia plantare ayurvedica olistica 2" },
       { date: "", desc: "13-14 FEB 2027: Muri Abhyangam -2, manipolazioni articolare" },
       { date: "3° ANNO", desc: "6-7 MAR 2027: Dhara, shirodhara, nasya e tutte le varianti. Sarvang abhyangam" },
-      { date: "", desc: "3-4 APR 2027: Pratyasth-miofasciale Ayurvedic olistico metodo AIMA" },
+      { date: "", desc: "3-4 APR 2027: Pratyasth-miofasciale Ayurvedic olistico metodo Aryaveda" },
       { date: "", desc: "8-9 MAG 2027: Garbhyangam & Balaabhyangam massaggio neonata e donna in dolce attesa" },
       { date: "", desc: "5-6 GIU 2027: Manas Abhyangam Anatomia del sistema nervoso." },
       { date: "", desc: "3-4 LUG 2027: Udgharshana, Udvartanam, Ubtan trattamenti con polveri erbali" },
@@ -136,7 +136,7 @@ const programData = [
       'UBTANA: trattamenti di maschere naturali per viso (segreti cliniche indiane).',
       'MASSAGGIO PRANICO: sequenza tipica del massaggio keralyano.',
       'PINDA SWEDA: tamponamento a caldo secco e oleoso (Patra Potali, Othadam, Navarakizhi).',
-      'PRATYASTH: miofasciale olistico metodo aima ayurveda con bendaggi.',
+      'PRATYASTH: miofasciale olistico metodo Aryaveda con bendaggi.',
       'AROMATERAPIA & AYURVEDA: IL KHUSHBU MALISH, oli essenziali e massaggio sensoriale.'
     ]
   },
@@ -217,7 +217,7 @@ const Milano = () => {
           <div className="mi-hero-badges mi-reveal">
             <div className="mi-badge"><MapPin size={18} /> Milano Centro (Via Teocrito 50)</div>
             <div className="mi-badge"><Clock size={18} /> 600 Ore / 30 Weekend</div>
-            <div className="mi-badge"><Award size={18} /> Diploma ASI / CONI</div>
+            <div className="mi-badge"><Award size={18} /> Diploma OPES / CONI</div>
           </div>
         </div>
       </section>
@@ -357,26 +357,17 @@ const Milano = () => {
 
       {/* ─── ESAMI E RICONOSCIMENTI ─── */}
       <section className="mi-section container mi-reveal">
-        <div style={{ background: '#fff', border: '1px solid var(--border-color)', borderRadius: '16px', padding: '3rem', boxShadow: 'var(--shadow-md)' }}>
-          <h2 className="mi-section-title text-center">Esami, Certificazioni e Borse di Studio</h2>
+        <div style={{ background: '#fff', border: '1px solid var(--border-color)', borderRadius: '16px', padding: '3rem', boxShadow: 'var(--shadow-md)', maxWidth: '900px', margin: '0 auto' }}>
+          <h2 className="mi-section-title text-center">Esami e Certificazioni</h2>
           <div className="mi-divider center"></div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', marginTop: '2rem' }}>
-            <div>
-              <h3 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>Sessione Finale ed Esami (Legge 4/2013)</h3>
-              <p style={{ color: 'var(--text-light)', lineHeight: 1.8, fontSize: '0.95rem' }}>
-                Il programma prevede una breve sessione di esame ad ogni livello intermedio per l'accesso al livello successivo.<br/><br/>
-                Al completamento del <strong>Biennio</strong>: esame scritto, orale e pratico per la consegna del certificato per Operatore Tecnico del Benessere in Ayurveda dell'Accademia (Legge 4/2013).<br/><br/>
-                Al completamento del <strong>Triennio (Master)</strong>: Esame finale per il Diploma Nazionale e Internazionale certificato da ente CONI. Viene rilasciato il tesserino tecnico di qualifica nazionale ASI CONI, con iscrizione all'albo.
-              </p>
-            </div>
-            <div>
-              <h3 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>Borse di Studio</h3>
-              <p style={{ color: 'var(--text-light)', lineHeight: 1.8, fontSize: '0.95rem' }}>
-                Il percorso biennale destinerà <strong>5 borse di studio</strong> per ogni anno accademico a giovani inoccupati ed ex lavoratori in cerca di riqualificazione (copertura 25% iscrizione, 15% retta mensile).<br/><br/>
-                <strong>Requisiti:</strong> Maggiore età, disoccupati, precari o part-time; donne in rientro lavorativo post-maternità. Reddito massimo nucleo familiare 28.000,00 Euro. Richiedi i moduli a <em>infoaryaveda8@gmail.com</em>.
-              </p>
-            </div>
+          <div style={{ marginTop: '2rem' }}>
+            <h3 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>Sessione Finale ed Esami (Legge 4/2013)</h3>
+            <p style={{ color: 'var(--text-light)', lineHeight: 1.8, fontSize: '0.95rem' }}>
+              Il programma prevede una breve sessione di esame ad ogni livello intermedio per l'accesso al livello successivo.<br/><br/>
+              Al completamento del <strong>Biennio</strong>: esame scritto, orale e pratico per la consegna del certificato per Operatore Tecnico del Benessere in Ayurveda dell'Accademia (Legge 4/2013).<br/><br/>
+              Al completamento del <strong>Triennio (Master)</strong>: Esame finale per il Diploma Nazionale e Internazionale certificato da ente CONI. Viene rilasciato il tesserino tecnico di qualifica nazionale OPES CONI, con iscrizione all'albo.
+            </p>
           </div>
         </div>
       </section>
@@ -392,7 +383,7 @@ const Milano = () => {
           <div className="mi-info-card">
             <div className="mi-info-icon"><MapPin size={32} /></div>
             <h3>Sede</h3>
-            <p>Centro A.I.M.A. AYURVEDA<br/>Via Teocrito 50, Milano.<br/>Entrata libera per colloquio preliminare.</p>
+            <p>Centro Aryaveda<br/>Via Teocrito 50, Milano.<br/>Entrata libera per colloquio preliminare.</p>
           </div>
           <div className="mi-info-card">
             <div className="mi-info-icon"><Award size={32} /></div>

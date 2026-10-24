@@ -38,7 +38,7 @@ const Barletta = () => {
                 <div className="info-card">
                   <Award className="icon text-primary" size={32} />
                   <h3>Certificazione</h3>
-                  <p>Diploma ASI - CONI</p>
+                  <p>Diploma OPES - CONI</p>
                 </div>
               </div>
             </div>
