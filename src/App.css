@@ -49,7 +49,7 @@
   font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   cursor: pointer;
   padding: 2px 6px;
   border-radius: 4px;
@@ -58,6 +58,25 @@
 
 .top-bar-lang-btn:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-tag {
+  display: inline-block;
+  opacity: 0.65;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.lang-tag.lang-active {
+  opacity: 1;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lang-sep {
+  opacity: 0.4;
+  margin: 0 1px;
 }
 
 .social-link-item {
@@ -1133,5 +1152,36 @@
   }
 }
 
+/* Google Translate Overrides & Clean Layout */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+.goog-te-banner {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
 
+body {
+  top: 0px !important;
+  position: static !important;
+}
 
+#google_translate_element {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
+}

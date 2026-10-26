@@ -8,7 +8,17 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
+  const [currentLang, setCurrentLang] = useState<'it' | 'en'>('it');
   const location = useLocation();
+
+  const getLanguage = (): 'it' | 'en' => {
+    const match = document.cookie.match(/(^|;)\s*googtrans=([^;]+)/);
+    if (match) {
+      const val = decodeURIComponent(match[2]);
+      if (val.endsWith('/en')) return 'en';
+    }
+    return 'it';
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,24 +46,48 @@ const Header = () => {
     };
   }, [mobileMenuOpen]);
 
+  useEffect(() => {
+    setCurrentLang(getLanguage());
+  }, []);
+
   const toggleLanguage = () => {
-    const getCookie = (name: string) => {
-      const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-      if (match) return decodeURIComponent(match[2]);
-      return null;
-    };
-    
-    const setCookie = (name: string, value: string) => {
-      document.cookie = `${name}=${value};path=/`;
-      document.cookie = `${name}=${value};path=/;domain=${window.location.hostname}`;
+    const isEn = getLanguage() === 'en';
+    const targetLang = isEn ? 'it' : 'en';
+
+    const setTransCookie = (val: string) => {
+      document.cookie = `googtrans=${val}; path=/`;
+      const hostname = window.location.hostname;
+      if (hostname && hostname.includes('.') && !/^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
+        const rootDomain = hostname.replace(/^www\./, '');
+        document.cookie = `googtrans=${val}; path=/; domain=.${rootDomain}`;
+        document.cookie = `googtrans=${val}; path=/; domain=${hostname}`;
+      }
     };
 
-    const currentLang = getCookie('googtrans');
-    if (currentLang === '/it/en') {
-      setCookie('googtrans', '/it/it');
+    const deleteTransCookie = () => {
+      const expire = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = `googtrans=; ${expire}`;
+      const hostname = window.location.hostname;
+      if (hostname && hostname.includes('.') && !/^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
+        const rootDomain = hostname.replace(/^www\./, '');
+        document.cookie = `googtrans=; ${expire} domain=.${rootDomain};`;
+        document.cookie = `googtrans=; ${expire} domain=${hostname};`;
+      }
+    };
+
+    if (targetLang === 'it') {
+      deleteTransCookie();
+      setTransCookie('/it/it');
     } else {
-      setCookie('googtrans', '/it/en');
+      setTransCookie('/it/en');
     }
+
+    const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
+    if (select) {
+      select.value = targetLang;
+      select.dispatchEvent(new Event('change'));
+    }
+
     window.location.reload();
   };
 
@@ -118,10 +152,15 @@ const Header = () => {
             <button 
               type="button" 
               onClick={toggleLanguage} 
-              className="top-bar-lang-btn"
-              aria-label="Cambia lingua"
+              className="top-bar-lang-btn notranslate"
+              translate="no"
+              aria-label={currentLang === 'it' ? 'Traduci in Inglese' : 'Passa alla lingua Italiana'}
+              title={currentLang === 'it' ? 'Passa all\'Inglese' : 'Passa all\'Italiano'}
             >
-              <Globe size={14} /> EN/IT
+              <Globe size={14} />
+              <span className={`lang-tag ${currentLang === 'en' ? 'lang-active' : ''}`}>EN</span>
+              <span className="lang-sep">/</span>
+              <span className={`lang-tag ${currentLang === 'it' ? 'lang-active' : ''}`}>IT</span>
             </button>
           </div>
         </div>
@@ -141,10 +180,9 @@ const Header = () => {
             <div className="nav-row nav-row-top">
               <Link 
                 to="/" 
-                translate="no" 
-                className={`nav-link notranslate${location.pathname === '/' ? ' active' : ''}`}
+                className={`nav-link${location.pathname === '/' ? ' active' : ''}`}
               >
-                <span translate="no" className="notranslate">HOME</span>
+                <span>HOME</span>
               </Link>
               <Link 
                 to="/chi-siamo" 
@@ -225,12 +263,17 @@ const Header = () => {
             <button 
               type="button" 
               onClick={toggleLanguage} 
-              className="mobile-lang-btn"
-              title="Cambia Lingua"
+              className="mobile-lang-btn notranslate"
+              translate="no"
+              title={currentLang === 'it' ? 'Passa alla lingua Inglese' : 'Passa alla lingua Italiana'}
               aria-label="Cambia Lingua"
             >
               <Globe size={16} />
-              <span>EN/IT</span>
+              <span>
+                <span className={`lang-tag ${currentLang === 'en' ? 'lang-active' : ''}`}>EN</span>
+                <span className="lang-sep">/</span>
+                <span className={`lang-tag ${currentLang === 'it' ? 'lang-active' : ''}`}>IT</span>
+              </span>
             </button>
             <button 
               type="button" 

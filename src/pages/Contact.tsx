@@ -81,7 +81,7 @@ const Contact = () => {
         
         {/* Left Side: Premium Form */}
         <div className="form-container">
-          <h2 className="section-title notranslate" translate="no">Richiedi Informazioni</h2>
+          <h2 className="section-title">Richiedi Informazioni</h2>
           
           <form className="premium-form" onSubmit={handleSubmit}>
             <div className="input-group">

@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-subtitle">Mettiti in contatto</span>
-          <h2 className="section-title notranslate" translate="no">Richiedi Informazioni</h2>
+          <h2 className="section-title">Richiedi Informazioni</h2>
         </div>
         
         <div className="home-contact-wrapper">
