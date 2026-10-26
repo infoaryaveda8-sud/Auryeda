@@ -68,81 +68,70 @@ const AnimatedNumber = ({ end, suffix = '', delay = 0 }: { end: number, suffix?:
 
 const Stats: React.FC = () => {
   return (
-    <section className="stats-section" style={{ 
+    <section className="stats-section section-padding" style={{ 
       position: 'relative', 
-      padding: '6rem 0',
       backgroundColor: 'var(--bg-soft)',
       textAlign: 'center'
     }}>
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <h2 style={{ fontSize: '3rem', marginBottom: '4rem', fontFamily: 'var(--font-heading)', color: 'var(--text-main)' }}>
+        <h2 className="section-title" style={{ marginBottom: '3.5rem' }}>
           I nostri <span style={{ color: 'var(--primary)', fontStyle: 'italic' }}>Numeri</span>
         </h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2.5rem' }}>
+        <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '2rem' }}>
           
           {/* Card 1 */}
-          <div style={{ 
+          <div className="stats-card" style={{ 
             background: '#fff', 
-            padding: '3rem 2rem', 
+            padding: '2.5rem 1.5rem', 
             borderRadius: '16px',
             boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
             border: '1px solid rgba(0,0,0,0.02)',
             transition: 'transform 0.3s ease',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-          >
-            <div style={{ width: '80px', height: '80px', borderRadius: '50%', backgroundColor: 'rgba(148, 58, 57, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: 'var(--primary)' }}>
-              <Globe size={40} />
+          }}>
+            <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'rgba(148, 58, 57, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem', color: 'var(--primary)' }}>
+              <Globe size={36} />
             </div>
-            <div style={{ fontSize: '3.5rem', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+            <div style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
               <AnimatedNumber end={20} delay={0} />
             </div>
-            <div style={{ fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 600 }}>Collaborazioni Internazionali</div>
+            <div style={{ fontSize: '0.82rem', letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 600 }}>Collaborazioni Internazionali</div>
           </div>
           
           {/* Card 2 */}
-          <div style={{ 
+          <div className="stats-card" style={{ 
             background: '#fff', 
-            padding: '3rem 2rem', 
+            padding: '2.5rem 1.5rem', 
             borderRadius: '16px',
             boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
             border: '1px solid rgba(0,0,0,0.02)',
             transition: 'transform 0.3s ease',
-            marginTop: '-20px' // offset for dynamic layout
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-30px)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(-20px)'}
-          >
-            <div style={{ width: '80px', height: '80px', borderRadius: '50%', backgroundColor: 'rgba(148, 58, 57, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: 'var(--primary)' }}>
-              <Users size={40} />
+          }}>
+            <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'rgba(148, 58, 57, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem', color: 'var(--primary)' }}>
+              <Users size={36} />
             </div>
-            <div style={{ fontSize: '3.5rem', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+            <div style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
               <AnimatedNumber end={12} suffix="k" delay={200} />
             </div>
-            <div style={{ fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 600 }}>Allievi Formati</div>
+            <div style={{ fontSize: '0.82rem', letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 600 }}>Allievi Formati</div>
           </div>
           
           {/* Card 3 */}
-          <div style={{ 
+          <div className="stats-card" style={{ 
             background: '#fff', 
-            padding: '3rem 2rem', 
+            padding: '2.5rem 1.5rem', 
             borderRadius: '16px',
             boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
             border: '1px solid rgba(0,0,0,0.02)',
             transition: 'transform 0.3s ease',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-          >
-            <div style={{ width: '80px', height: '80px', borderRadius: '50%', backgroundColor: 'rgba(148, 58, 57, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: 'var(--primary)' }}>
-              <Star size={40} />
+          }}>
+            <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'rgba(148, 58, 57, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem', color: 'var(--primary)' }}>
+              <Star size={36} />
             </div>
-            <div style={{ fontSize: '3.5rem', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+            <div style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
               <AnimatedNumber end={40} delay={400} />
             </div>
-            <div style={{ fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 600 }}>Specialisti</div>
+            <div style={{ fontSize: '0.82rem', letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 600 }}>Specialisti</div>
           </div>
           
         </div>

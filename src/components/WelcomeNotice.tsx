@@ -3,7 +3,7 @@ import React from 'react';
 const WelcomeNotice: React.FC = () => {
   return (
     <section className="section-padding" style={{ backgroundColor: '#fff' }}>
-      <div className="container about-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
+      <div className="container about-grid">
         <div className="about-content">
           <span className="section-subtitle">Annuncio Importante</span>
           <h2>Cari Amici ed allievi dei corsi di formazione</h2>
@@ -14,7 +14,7 @@ const WelcomeNotice: React.FC = () => {
           <br/>
           <h3 style={{fontFamily: 'var(--font-heading)', color: 'var(--primary)'}}>Namaste.</h3>
         </div>
-        <div className="about-image-wrapper" style={{ order: 1 }}>
+        <div className="about-image-wrapper">
           <img 
             src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=2074&auto=format&fit=crop" 
             alt="Namaste Yoga" 

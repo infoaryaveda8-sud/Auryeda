@@ -2,32 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Heart, MapPin, Mail, Phone } from 'lucide-react';
 import { FaYoutube, FaInstagram, FaLinkedinIn, FaFacebookF } from 'react-icons/fa';
+import './Footer.css';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer 
-      style={{ 
-        backgroundColor: '#1C1917', 
-        color: '#D6D3D1', 
-        padding: '3rem 0 2rem 0', 
-        borderTop: '3px solid var(--primary)',
-        fontSize: '0.88rem',
-        lineHeight: 1.6
-      }}
-    >
+    <footer className="site-footer">
       <div className="container">
         {/* Top Info Grid */}
-        <div 
-          style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', 
-            gap: '2.5rem',
-            paddingBottom: '2.5rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-          }}
-        >
+        <div className="footer-info-grid">
           {/* Col 1: About Arya Veda */}
           <div>
             <h4 style={{ fontFamily: 'var(--font-heading)', color: '#FFFFFF', fontSize: '1.25rem', marginBottom: '0.8rem', letterSpacing: '0.5px' }}>
@@ -161,22 +145,11 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div 
-          style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'center', 
-            flexWrap: 'wrap', 
-            gap: '1rem',
-            paddingTop: '1.5rem',
-            fontSize: '0.82rem',
-            color: '#78716C'
-          }}
-        >
+        <div className="footer-bottom-bar">
           <p>
             © {currentYear} Arya Veda A.C. — Tutti i diritti riservati.
           </p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+          <div className="footer-bottom-links">
             <Link 
               to="/privacy-policy" 
               style={{ color: '#A8A29E', textDecoration: 'none', transition: 'color 0.2s' }}

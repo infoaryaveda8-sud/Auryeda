@@ -489,11 +489,38 @@
   .cs-gallery { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 }
 @media (max-width: 768px) {
-  .cs-mission-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .cs-mission,
+  .cs-values,
+  .cs-teachers,
+  .cs-storia,
+  .cs-banner {
+    padding: 3.5rem 0;
+  }
+  .cs-hero { 
+    height: auto; 
+    min-height: 380px; 
+    padding: 5rem 1rem 3rem;
+  }
+  .cs-hero-title {
+    font-size: 2.8rem;
+  }
+  .cs-section-hdr {
+    margin-bottom: 2.5rem;
+  }
+  .cs-h2 {
+    font-size: 1.85rem;
+  }
+  .cs-mission-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .cs-mission-visual { order: -1; }
   .cs-img-secondary { display: none; }
-  .cs-values-grid { grid-template-columns: 1fr; }
-  .cs-teachers-grid { grid-template-columns: 1fr; }
-  .cs-gallery { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
-  .cs-hero { height: 50vh; min-height: 400px; }
+  .cs-values-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cs-value-card { padding: 1.75rem 1.25rem; }
+  .cs-teachers-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .cs-teacher-body { padding: 1.4rem; }
+  .cs-gallery { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
+  .cs-banner-inner p { font-size: 1rem; margin-bottom: 1.8rem; }
+  .cs-banner-btns { flex-direction: column; align-items: center; }
+  .cs-banner-btns .btn,
+  .cs-banner-btns .cs-btn-ghost { width: 100%; max-width: 300px; }
 }
+

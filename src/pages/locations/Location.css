@@ -164,3 +164,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .location-page .page-header {
+    padding: 3.5rem 1rem;
+  }
+  .info-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .curriculum-table th,
+  .curriculum-table td {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.88rem;
+  }
+  .year-cell {
+    width: 70px;
+    font-size: 0.85rem;
+  }
+}
+

@@ -45,48 +45,48 @@ const ContactForm: React.FC = () => {
           <h2 className="section-title notranslate" translate="no">Richiedi Informazioni</h2>
         </div>
         
-        <div style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: '#fff', padding: '3rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-              <input type="text" name="name" placeholder="Nome *" required style={{ padding: '1rem', border: '1px solid #ddd', borderRadius: '4px' }} />
-              <input type="email" name="email" placeholder="Email *" required style={{ padding: '1rem', border: '1px solid #ddd', borderRadius: '4px' }} />
-              <input type="tel" name="phone" placeholder="Telefono *" required style={{ padding: '1rem', border: '1px solid #ddd', borderRadius: '4px' }} />
-              <input type="text" name="subject" placeholder="Oggetto *" required style={{ padding: '1rem', border: '1px solid #ddd', borderRadius: '4px' }} />
+        <div className="home-contact-wrapper">
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div className="home-contact-grid">
+              <input type="text" name="name" placeholder="Nome *" required className="home-contact-input" />
+              <input type="email" name="email" placeholder="Email *" required className="home-contact-input" />
+              <input type="tel" name="phone" placeholder="Telefono *" required className="home-contact-input" />
+              <input type="text" name="subject" placeholder="Oggetto *" required className="home-contact-input" />
             </div>
             
-            <textarea name="message" placeholder="Messaggio *" rows={6} required style={{ padding: '1rem', border: '1px solid #ddd', borderRadius: '4px', resize: 'vertical' }}></textarea>
+            <textarea name="message" placeholder="Messaggio *" rows={5} required className="home-contact-textarea"></textarea>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.85rem', marginTop: '1rem', color: 'var(--text-light)' }}>
-              <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                <input type="checkbox" name="privacy_accepted" required style={{ marginTop: '3px' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.85rem', marginTop: '0.5rem', color: 'var(--text-light)' }}>
+              <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', cursor: 'pointer' }}>
+                <input type="checkbox" name="privacy_accepted" required style={{ marginTop: '3px', flexShrink: 0 }} />
                 <span>
                   Dichiaro di aver letto l'<Link to="/privacy-policy" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>informativa sulla privacy</Link> e acconsento al trattamento dei dati personali (GDPR UE 2016/679)*
                 </span>
               </label>
-              <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                <input type="checkbox" name="marketing_accepted" style={{ marginTop: '3px' }} />
-                Acconsento al trattamento dei dati personali per l'invio di materiale promozionale, newsletter e iscrizione ad eventi.
+              <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', cursor: 'pointer' }}>
+                <input type="checkbox" name="marketing_accepted" style={{ marginTop: '3px', flexShrink: 0 }} />
+                <span>Acconsento al trattamento dei dati personali per l'invio di materiale promozionale, newsletter e iscrizione ad eventi.</span>
               </label>
             </div>
 
             {submitStatus === 'success' && (
-              <div style={{ backgroundColor: '#10B981', color: 'white', padding: '1rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle size={20} /> Il tuo messaggio è stato inviato con successo! Ti risponderemo al più presto.
+              <div style={{ backgroundColor: '#10B981', color: 'white', padding: '1rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
+                <CheckCircle size={20} style={{ flexShrink: 0 }} /> Il tuo messaggio è stato inviato con successo! Ti risponderemo al più presto.
               </div>
             )}
 
             {submitStatus === 'error' && (
-              <div style={{ backgroundColor: '#EF4444', color: 'white', padding: '1rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <AlertCircle size={20} /> Si è verificato un errore nell'invio. Riprova più tardi o contattaci direttamente su WhatsApp.
+              <div style={{ backgroundColor: '#EF4444', color: 'white', padding: '1rem', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
+                <AlertCircle size={20} style={{ flexShrink: 0 }} /> Si è verificato un errore nell'invio. Riprova più tardi o contattaci direttamente su WhatsApp.
               </div>
             )}
             
-            <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+            <div style={{ marginTop: '0.5rem', textAlign: 'center' }}>
               <button 
                 type="submit" 
                 className="btn btn-primary" 
                 disabled={isSubmitting}
-                style={{ padding: '0.9rem 3rem', display: 'inline-flex', alignItems: 'center', gap: '0.6rem', opacity: isSubmitting ? 0.7 : 1 }}
+                style={{ minWidth: '220px', display: 'inline-flex', alignItems: 'center', gap: '0.6rem', opacity: isSubmitting ? 0.7 : 1 }}
               >
                 <Send size={18} /> {isSubmitting ? 'Invio in corso...' : 'Invia Richiesta'}
               </button>

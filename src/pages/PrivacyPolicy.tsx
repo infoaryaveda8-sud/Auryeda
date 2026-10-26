@@ -29,14 +29,8 @@ const PrivacyPolicy: React.FC = () => {
 
         {/* Header Card */}
         <div 
-          style={{ 
-            backgroundColor: '#FFFFFF', 
-            padding: '3rem 2.5rem', 
-            borderRadius: '16px', 
-            boxShadow: 'var(--shadow-sm)', 
-            marginBottom: '2rem',
-            borderLeft: '5px solid var(--primary)'
-          }}
+          className="privacy-card"
+          style={{ borderLeft: '5px solid var(--primary)' }}
         >
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.75rem' }}>
             <ShieldCheck size={20} />
@@ -55,11 +49,8 @@ const PrivacyPolicy: React.FC = () => {
 
         {/* Content Card */}
         <div 
+          className="privacy-card"
           style={{ 
-            backgroundColor: '#FFFFFF', 
-            padding: '3rem 2.5rem', 
-            borderRadius: '16px', 
-            boxShadow: 'var(--shadow-sm)',
             color: 'var(--text-main)',
             lineHeight: '1.8',
             fontSize: '1rem'

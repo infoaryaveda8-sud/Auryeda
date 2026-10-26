@@ -58,7 +58,7 @@
   font-weight: 700;
   margin-bottom: 1.2rem;
   background: linear-gradient(135deg, #fff 30%, var(--secondary) 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .acc-subtitle {
@@ -301,16 +301,46 @@
 }
 @media (max-width: 768px) {
   .acc-header {
-    height: 40vh;
-    min-height: 350px;
+    height: auto;
+    min-height: 340px;
+    padding: 5rem 1rem 3rem;
+  }
+  .acc-title {
+    font-size: 2.4rem;
   }
   .acc-sedi-section {
-    padding-top: 4rem;
+    padding-top: 3.5rem;
   }
   .acc-grid {
     grid-template-columns: 1fr;
   }
+  .acc-card {
+    height: 340px;
+  }
   .acc-pro-section {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
+  }
+  .acc-pro-content {
+    padding: 2rem 1.25rem;
+  }
+  .acc-pro-content h2 {
+    font-size: 1.8rem;
   }
 }
+
+@media (hover: none), (max-width: 768px) {
+  .acc-card h3,
+  .acc-card p,
+  .acc-card-btn {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .acc-card-icon {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .acc-card-overlay {
+    background: linear-gradient(to top, rgba(20,5,0,0.95) 0%, rgba(20,5,0,0.6) 60%, rgba(20,5,0,0.2) 100%) !important;
+  }
+}
+

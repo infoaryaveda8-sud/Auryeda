@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Clock, Award, CheckCircle2, ChevronDown, BookOpen, HeartHandshake } from 'lucide-react';
 import './Milano.css';
 import schemaImg from '../assets/SCHEMA-TRIENNALE-AYURVEDA.jpg';
@@ -258,15 +259,15 @@ const Milano = () => {
           <h2 className="mi-section-title text-center">Calendario Date e Appuntamenti</h2>
           <div className="mi-divider center"></div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem', marginTop: '3rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3rem', marginTop: '2.5rem' }}>
             {calendarioData.map((anno, idx) => (
-              <div key={idx} style={{ background: '#fff', borderRadius: '12px', padding: '2rem', boxShadow: 'var(--shadow-sm)' }}>
+              <div key={idx} className="mi-calendar-card">
                 <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '0.5rem' }}>{anno.title}</h3>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {anno.items.map((item, i) => (
-                    <li key={i} style={{ display: 'flex', gap: '1.5rem', marginBottom: '1rem', borderBottom: '1px solid #f0f0f0', paddingBottom: '1rem' }}>
-                      <strong style={{ color: 'var(--secondary)', minWidth: '130px' }}>{item.date}</strong>
-                      <span style={{ color: 'var(--text-color)' }}>{item.desc}</span>
+                    <li key={i} className="mi-calendar-item">
+                      <span className="mi-calendar-date">{item.date}</span>
+                      <span className="mi-calendar-desc">{item.desc}</span>
                     </li>
                   ))}
                 </ul>
@@ -274,13 +275,13 @@ const Milano = () => {
             ))}
           </div>
 
-          <div style={{ marginTop: '4rem', background: '#fff', borderRadius: '12px', padding: '2rem', boxShadow: 'var(--shadow-sm)' }}>
+          <div style={{ marginTop: '3rem' }} className="mi-calendar-card">
             <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '0.5rem' }}>{calendarioTejas[0].title}</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {calendarioTejas[0].items.map((item, i) => (
-                <li key={i} style={{ display: 'flex', gap: '1.5rem', marginBottom: '1rem', borderBottom: '1px solid #f0f0f0', paddingBottom: '1rem' }}>
-                  <strong style={{ color: 'var(--secondary)', minWidth: '100px' }}>{item.date}</strong>
-                  <span style={{ color: 'var(--text-color)' }}>{item.desc}</span>
+                <li key={i} className="mi-calendar-item">
+                  <span className="mi-calendar-date">{item.date || '•'}</span>
+                  <span className="mi-calendar-desc">{item.desc}</span>
                 </li>
               ))}
             </ul>
@@ -357,7 +358,7 @@ const Milano = () => {
 
       {/* ─── ESAMI E RICONOSCIMENTI ─── */}
       <section className="mi-section container mi-reveal">
-        <div style={{ background: '#fff', border: '1px solid var(--border-color)', borderRadius: '16px', padding: '3rem', boxShadow: 'var(--shadow-md)', maxWidth: '900px', margin: '0 auto' }}>
+        <div className="mi-exam-card">
           <h2 className="mi-section-title text-center">Esami e Certificazioni</h2>
           <div className="mi-divider center"></div>
           
@@ -398,9 +399,9 @@ const Milano = () => {
         <div className="container mi-cta-content">
           <h2>Inizia il tuo viaggio professionale</h2>
           <p>Presentazione ufficiale corsi: 13 Settembre 2026 (15:30 - 18:30). Gradita la prenotazione.</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2rem' }}>
-            <button className="btn btn-primary">Richiedi Informazioni</button>
-            <button className="btn" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff' }}>WhatsApp: 3405865469</button>
+          <div className="mi-cta-buttons">
+            <Link to="/contact" className="btn btn-primary">Richiedi Informazioni</Link>
+            <a href="https://wa.me/393405865469" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff' }}>WhatsApp: 3405865469</a>
           </div>
           <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.9rem', color: '#fff' }}>Ogni Lunedì e Martedì - per info- 3928191230 or 3405865469</p>
         </div>

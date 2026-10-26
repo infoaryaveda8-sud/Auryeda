@@ -154,11 +154,12 @@
 @media (max-width: 768px) {
   .static-hero-section {
     min-height: 480px;
-    height: 60vh;
+    height: auto;
+    padding: 4.5rem 1rem;
   }
 
   .static-hero-title {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
   .static-hero-desc {
@@ -175,5 +176,28 @@
     width: 100%;
     max-width: 320px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .static-hero-section {
+    min-height: 400px;
+    padding: 3.5rem 1rem 3rem 1rem;
+  }
+  .static-hero-subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 2.5px;
+  }
+  .static-hero-title {
+    font-size: 2rem;
+  }
+  .static-hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+  }
+  .hero-btn-mentor,
+  .hero-btn-consult {
+    padding: 0.85rem 1.4rem;
+    font-size: 0.82rem;
   }
 }

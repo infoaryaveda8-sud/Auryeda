@@ -347,3 +347,58 @@
   border: none;
   filter: grayscale(20%) contrast(1.1);
 }
+
+@media (max-width: 768px) {
+  .premium-contact-hero {
+    height: auto;
+    min-height: 320px;
+    padding: 5rem 1rem 3rem;
+  }
+  .hero-content-wrapper h1 {
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+  }
+  .hero-content-wrapper p {
+    font-size: 1.05rem;
+  }
+  .contact-info-wrapper {
+    margin: 1.5rem auto 2.5rem;
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .premium-info-card {
+    padding: 2rem 1.5rem;
+  }
+  .contact-split-section {
+    padding: 2rem 1rem;
+    gap: 2.5rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .premium-form {
+    padding: 1.75rem 1.25rem;
+    border-radius: 16px;
+  }
+  .input-group input,
+  .input-group textarea {
+    padding: 1rem 1rem 1rem 2.8rem;
+    font-size: 0.95rem;
+  }
+  .input-icon {
+    left: 1rem;
+    top: 1rem;
+  }
+  .hospitality-banner {
+    padding: 2rem 1.25rem;
+    margin-top: 2rem;
+  }
+  .hospitality-banner h3 {
+    font-size: 1.6rem;
+  }
+  .contact-map-premium {
+    height: 350px;
+  }
+}
+

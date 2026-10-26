@@ -126,3 +126,33 @@
   50% { opacity: 0.8; transform: scale(1.05); }
   100% { opacity: 1; transform: scale(1); }
 }
+
+@media (max-width: 768px) {
+  .online-hero {
+    padding: 5rem 1rem 3.5rem;
+  }
+  .online-title {
+    font-size: 2.2rem;
+  }
+  .online-subtitle {
+    font-size: 1.2rem;
+  }
+  .online-section {
+    padding: 3.5rem 0;
+  }
+  .online-container {
+    padding: 0 1rem;
+  }
+  .wip-card {
+    padding: 2.5rem 1.25rem;
+  }
+  .wip-card h2 {
+    font-size: 1.8rem;
+  }
+  .wip-btn {
+    max-width: 100%;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.92rem;
+  }
+}
+

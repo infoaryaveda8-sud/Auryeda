@@ -447,16 +447,52 @@
 }
 
 @media (max-width: 768px) {
+  .prakriti-hero {
+    padding: 50px 15px;
+  }
+
+  .prakriti-title {
+    font-size: 2rem;
+  }
+
   .form-row {
     flex-direction: column;
     gap: 0;
   }
   
   .prakriti-content, .result-container {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    margin: 0 10px;
+  }
+
+  .lead-form-container {
+    padding: 1.75rem 1.25rem;
+    margin: 0 10px;
+  }
+
+  .quiz-question {
+    padding: 1.2rem 1rem;
+  }
+
+  .quiz-option {
+    padding: 0.85rem;
   }
   
+  .calc-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.9rem 1.5rem !important;
+    font-size: 1.05rem !important;
+  }
+
   .result-actions {
     flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .result-actions .btn {
+    width: 100%;
   }
 }
+
