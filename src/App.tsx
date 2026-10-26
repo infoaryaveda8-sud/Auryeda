@@ -14,6 +14,7 @@ import VisiteTerapie from './pages/VisiteTerapie';
 import ConsultiSadbhawna from './pages/ConsultiSadbhawna';
 import TrattamentiAyurveda from './pages/TrattamentiAyurveda';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import PrakritiTest from './pages/PrakritiTest';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -48,6 +49,8 @@ function App() {
           <Route path="/trattamenti-ayurveda" element={<TrattamentiAyurveda />} />
           <Route path="/prakriti-test" element={<PrakritiTest />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/perche-ayurveda-e-importante-nella-nostra-vita" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
