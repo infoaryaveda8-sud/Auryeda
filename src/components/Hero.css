@@ -1,138 +1,189 @@
 /* ==========================================================================
-   Static Ayurvedic Hero Banner (Single Image, No Sliding, No Arrows)
+   Ayurveda Hero Slider Component
    ========================================================================== */
 
-.static-hero-section {
+.hero-slider-section {
   position: relative;
   width: 100%;
-  min-height: 520px;
-  padding: 4.5rem 1rem 4rem 1rem;
+  min-height: 560px;
+  height: 72vh;
+  max-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: #120e0d;
+  user-select: none;
 }
 
-.static-hero-bg {
+/* Background Slides */
+.hero-slides-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
   z-index: 1;
-  filter: brightness(0.85);
-  transform: scale(1.01);
-  transition: transform 6s ease;
 }
 
-.static-hero-section:hover .static-hero-bg {
-  transform: scale(1.04);
-}
-
-.static-hero-overlay {
+.hero-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(15, 12, 10, 0.40) 0%,
-    rgba(15, 12, 10, 0.65) 50%,
-    rgba(15, 12, 10, 0.85) 100%
-  );
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
   z-index: 2;
 }
 
-.static-hero-container {
+.hero-slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-slide.active .hero-slide-bg {
+  transform: scale(1.04);
+}
+
+/* Elegant Multi-layered Overlay: Preserves portrait brightness while giving text contrast */
+.hero-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at center, rgba(15, 12, 10, 0.15) 0%, rgba(15, 12, 10, 0.65) 100%),
+    linear-gradient(
+      180deg,
+      rgba(15, 12, 10, 0.55) 0%,
+      rgba(15, 12, 10, 0.25) 40%,
+      rgba(15, 12, 10, 0.75) 100%
+    );
+  pointer-events: none;
+}
+
+/* Content Container */
+.hero-content-container {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  pointer-events: auto;
 }
 
-.static-hero-content {
+.hero-slide-content {
   text-align: center;
   color: #FFFFFF;
-  max-width: 880px;
-  padding: 0 1rem;
+  max-width: 860px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
 }
 
-.static-hero-subtitle {
+/* Keyframe for entering slide text */
+@keyframes heroTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroTextIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtitle Badge */
+.hero-subtitle-badge {
   display: inline-block;
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--secondary);
-  margin-bottom: 0.8rem;
+  color: var(--secondary, #deb853);
+  margin-bottom: 0.85rem;
   position: relative;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.static-hero-subtitle::before,
-.static-hero-subtitle::after {
+.hero-subtitle-badge::before,
+.hero-subtitle-badge::after {
   content: '—';
   margin: 0 10px;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
-.static-hero-title {
+/* Main Heading */
+.hero-slide-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-size: clamp(2.3rem, 5vw, 4.1rem);
   font-weight: 700;
   line-height: 1.15;
   color: #FFFFFF;
-  margin-bottom: 1.25rem;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1.15rem;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.85);
   letter-spacing: -0.5px;
 }
 
-.static-hero-desc {
+/* Description */
+.hero-slide-desc {
   font-family: var(--font-body);
-  font-size: 1.3rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
   font-weight: 300;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.94);
-  margin: 0 auto 2.5rem auto;
-  max-width: 740px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto 2.2rem auto;
+  max-width: 720px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-.static-hero-buttons {
+/* Buttons */
+.hero-slide-actions {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.2rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.hero-btn-mentor {
-  background-color: var(--primary);
+.hero-btn-primary {
+  background-color: var(--primary, #943A39);
   color: #FFFFFF;
   padding: 0.95rem 2.2rem;
   font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(148, 58, 57, 0.4);
-  transition: var(--transition-smooth);
+  box-shadow: 0 4px 18px rgba(148, 58, 57, 0.45);
+  transition: var(--transition-smooth, all 0.3s ease);
 }
 
-.hero-btn-mentor:hover {
-  background-color: var(--primary-hover);
+.hero-btn-primary:hover {
+  background-color: var(--primary-hover, #7a2f2e);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(148, 58, 57, 0.6);
+  box-shadow: 0 8px 25px rgba(148, 58, 57, 0.65);
 }
 
-.hero-btn-consult {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+.hero-btn-secondary {
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.75);
   padding: 0.95rem 2.2rem;
@@ -140,64 +191,219 @@
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 4px;
-  transition: var(--transition-smooth);
+  transition: var(--transition-smooth, all 0.3s ease);
 }
 
-.hero-btn-consult:hover {
+.hero-btn-secondary:hover {
   background-color: #FFFFFF;
-  color: var(--primary);
+  color: var(--primary, #943A39);
   border-color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.35);
+}
+
+/* Navigation Chevrons */
+.hero-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(25, 20, 18, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.hero-nav-btn:hover {
+  background: var(--primary, #943A39);
+  border-color: var(--secondary, #deb853);
+  color: #FFFFFF;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(148, 58, 57, 0.55);
+}
+
+.hero-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.hero-nav-prev {
+  left: 24px;
+}
+
+.hero-nav-next {
+  right: 24px;
+}
+
+/* Bottom Controls Bar (Dots + Pause) */
+.hero-controls-bar {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background: rgba(18, 14, 13, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-dot.active {
+  width: 32px;
+  background: var(--secondary, #deb853);
+  box-shadow: 0 0 10px rgba(222, 184, 83, 0.6);
+}
+
+.hero-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-pause-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-pause-btn:hover {
+  color: #FFFFFF;
+  transform: scale(1.15);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .hero-slider-section {
+    min-height: 520px;
+    height: 65vh;
+  }
+  .hero-nav-prev {
+    left: 12px;
+  }
+  .hero-nav-next {
+    right: 12px;
+  }
 }
 
 @media (max-width: 768px) {
-  .static-hero-section {
-    min-height: 480px;
+  .hero-slider-section {
+    min-height: 500px;
     height: auto;
-    padding: 4.5rem 1rem;
+    padding: 5rem 1rem 4rem 1rem;
   }
 
-  .static-hero-title {
-    font-size: 2.5rem;
+  .hero-nav-btn {
+    width: 42px;
+    height: 42px;
   }
 
-  .static-hero-desc {
+  .hero-nav-prev {
+    left: 8px;
+  }
+
+  .hero-nav-next {
+    right: 8px;
+  }
+
+  .hero-slide-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-slide-desc {
     font-size: 1.05rem;
+    margin-bottom: 1.8rem;
   }
 
-  .static-hero-buttons {
+  .hero-slide-actions {
     flex-direction: column;
     gap: 0.85rem;
   }
 
-  .hero-btn-mentor,
-  .hero-btn-consult {
+  .hero-btn-primary,
+  .hero-btn-secondary {
     width: 100%;
     max-width: 320px;
     text-align: center;
   }
+
+  .hero-controls-bar {
+    bottom: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-  .static-hero-section {
-    min-height: 400px;
-    padding: 3.5rem 1rem 3rem 1rem;
+  .hero-slider-section {
+    min-height: 440px;
+    padding: 4.5rem 0.75rem 3.5rem 0.75rem;
   }
-  .static-hero-subtitle {
-    font-size: 0.78rem;
-    letter-spacing: 2.5px;
+
+  .hero-subtitle-badge {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
   }
-  .static-hero-title {
-    font-size: 2rem;
+
+  .hero-slide-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
   }
-  .static-hero-desc {
+
+  .hero-slide-desc {
     font-size: 0.95rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
   }
-  .hero-btn-mentor,
-  .hero-btn-consult {
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
     padding: 0.85rem 1.4rem;
     font-size: 0.82rem;
+  }
+
+  /* Make navigation arrows slightly more discrete on small screens */
+  .hero-nav-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(25, 20, 18, 0.35);
   }
 }
