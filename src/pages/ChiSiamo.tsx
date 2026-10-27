@@ -19,7 +19,7 @@ const values = [
   { icon: <BookOpen size={28} />, title: 'Sapere Millenario', desc: 'Trasmissione fedele della scienza vedica, nel rispetto dei testi originali e delle tradizioni antiche.' },
   { icon: <Heart size={28} />, title: 'Approccio Olistico', desc: "Mente, corpo e spirito come un unico sistema: la via dell'Ayurveda verso il benessere completo." },
   { icon: <Star size={28} />, title: 'Esperienza Autentica', desc: 'Viaggi in India, visite ai luoghi sacri, e immersione diretta nella cultura vedica.' },
-  { icon: <Globe size={28} />, title: 'Comunita Internazionale', desc: "Una rete di studenti e praticanti in tutta Italia e oltre, uniti dalla passione per l'Ayurveda." },
+  { icon: <Globe size={28} />, title: 'Comunità Internazionale', desc: "Una rete di studenti e praticanti in tutta Italia e oltre, uniti dalla passione per l'Ayurveda." },
 ];
 
 const teachers = [
@@ -83,7 +83,7 @@ const ChiSiamo = () => {
       <section className="cs-hero">
         <div className="cs-hero-overlay" />
         <div className="cs-hero-content">
-          <span className="cs-hero-eyebrow">La nostra identita</span>
+          <span className="cs-hero-eyebrow">La nostra identità</span>
           <h1 className="cs-hero-title">Chi Siamo</h1>
           <p className="cs-hero-sub">Tradizione autentica, formazione eccellente,<br />benessere profondo.</p>
           <div className="cs-hero-ornament"><span>*</span><span>*</span><span>*</span></div>
@@ -100,9 +100,9 @@ const ChiSiamo = () => {
               <span className="cs-label">La nostra Missione</span>
               <h2 className="cs-h2">Obiettivi e Scopi di <span className="cs-gold">Aryaveda</span>,<br /><em>scuola massaggio ayurveda milano</em></h2>
               <div className="cs-divider" />
-              <p>Fondata con la missione di diffondere la millenaria saggezza dell Ayurveda in Italia, l Associazione Culturale <strong>Aryaveda A.C.</strong> e oggi un punto di riferimento per chi cerca una formazione autentica e di alta qualita nel campo delle discipline olistiche.</p>
-              <p>Il nostro approccio unisce l antica conoscenza vedica con le esigenze della vita moderna, offrendo percorsi che non sono solo professionalizzanti, ma anche veri e propri viaggi di trasformazione personale.</p>
-              <p><strong>Aryaveda</strong>, scuola di massaggio ayurvedico con sede a Milano, si distingue per la qualita degli insegnanti e per la profondita dei programmi didattici che coprono dall Abhyanga classico alle tecniche diagnostiche del Nadi Pariksha.</p>
+              <p>Fondata con la missione di diffondere la millenaria saggezza dell'Ayurveda in Italia, L'Associazione Culturale <strong>Aryaveda A.C.</strong> è oggi un punto di riferimento per chi cerca una formazione autentica e di alta qualità nel campo delle discipline olistiche.</p>
+              <p>Il nostro approccio unisce L'antica conoscenza vedica con le esigenze della vita moderna, offrendo percorsi che non sono solo professionalizzanti, ma anche veri e propri viaggi di trasformazione personale.</p>
+              <p><strong>Aryaveda</strong>, scuola di massaggio ayurvedico con sede a Milano, si distingue per la qualità degli insegnanti e per la profondità dei programmi didattici che coprono dall'Abhyanga classico alle tecniche diagnostiche del Nadi Pariksha.</p>
               <a href="https://corsimassaggiomilano.it/corso-ayurveda-tradizionale-a-livelli-con-attestato-2027-28/" target="_blank" rel="noopener noreferrer" className="cs-cta-link">Scopri i nostri corsi <span className="cs-arrow">→</span></a>
             </div>
             <div className="cs-mission-visual reveal reveal-right">
@@ -172,7 +172,7 @@ const ChiSiamo = () => {
             <span className="cs-label">Le nostre origini</span>
             <h2 className="cs-h2">Nella Nostra Storia</h2>
             <div className="cs-divider center" />
-            <p className="cs-hdr-sub">Un percorso di passione, dedizione e autenticita attraverso gli anni.</p>
+            <p className="cs-hdr-sub">Un percorso di passione, dedizione e autenticità attraverso gli anni.</p>
           </div>
           <div className="cs-gallery reveal">
             {historyGallery.map((item, i) => (

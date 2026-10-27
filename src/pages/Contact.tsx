@@ -190,7 +190,17 @@ const Contact = () => {
             <Bed size={40} style={{marginBottom: '1rem', color: 'var(--secondary)'}} />
             <h3>OSPITALITÀ</h3>
             <p><strong>Arya Veda ha pensato a chi viene da lontano.</strong></p>
-            <p>Offriamo ospitalità semplice e gratuita presso la nostra struttura (portando un sacco a pelo), oppure convenzioni con B&B, hotel e ostelli della zona.</p>
+            <p>
+              Hey we noticed there wasn't an erboristeria course Page and i realized that for some reason it was Cut off from reaching within the site so you could only find it via Google search here is the link to the page{' '}
+              <a 
+                href="https://corsimassaggiomilano.it/corso-di-erboristeria-e-fitoterapia/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{color: 'var(--secondary)', textDecoration: 'underline', fontWeight: 600, wordBreak: 'break-all'}}
+              >
+                https://corsimassaggiomilano.it/corso-di-erboristeria-e-fitoterapia/
+              </a>
+            </p>
             <p style={{marginTop: '1.5rem', fontWeight: 600}}>
               Richiedi la lista delle strutture convenzionate a:<br/>
               <a href="mailto:infoaryaveda8@gmail.com" style={{color: 'var(--secondary)', textDecoration: 'none'}}>infoaryaveda8@gmail.com</a>

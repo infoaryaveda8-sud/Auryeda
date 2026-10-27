@@ -17,10 +17,10 @@ const About = () => {
             <div className="story-content">
               <h2 className="h2">La Nostra Storia</h2>
               <p>
-                Fondata con la missione di diffondere la millenaria saggezza dell'Ayurveda in Italia, l'Associazione Culturale Aryaveda A.C. è oggi un punto di riferimento per chi cerca una formazione autentica e di alta qualità nel campo delle discipline olistiche.
+                Fondata con la missione di diffondere la millenaria saggezza dell'Ayurveda in Italia, L'Associazione Culturale Aryaveda A.C. è oggi un punto di riferimento per chi cerca una formazione autentica e di alta qualità nel campo delle discipline olistiche.
               </p>
               <p>
-                Il nostro approccio unisce l'antica conoscenza vedica con le esigenze della vita moderna, offrendo percorsi che non sono solo professionalizzanti, ma anche veri e propri viaggi di trasformazione personale.
+                Il nostro approccio unisce L'antica conoscenza vedica con le esigenze della vita moderna, offrendo percorsi che non sono solo professionalizzanti, ma anche veri e propri viaggi di trasformazione personale.
               </p>
               
               <div className="core-values">
