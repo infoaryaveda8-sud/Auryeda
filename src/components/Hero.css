@@ -407,3 +407,72 @@
     background: rgba(25, 20, 18, 0.35);
   }
 }
+
+/* ==========================================================================
+   Poster Slide (image already contains its own text, e.g. Open Day)
+   ========================================================================== */
+
+.hero-poster-link {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Blurred copy fills the empty space around the poster */
+.hero-poster-blur {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(28px) brightness(0.85);
+  transform: scale(1.15);
+}
+
+/* <picture> wrapper should not affect layout */
+.hero-poster-link picture {
+  display: contents;
+}
+
+/* Full poster, never cropped */
+.hero-poster-img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Let clicks pass through the empty content layer on poster slides */
+.hero-content-container.is-poster {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero-poster-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Desktop/tablet: banner keeps its normal height; the wide (1920x700)
+   Open Day image fills it edge to edge. */
+@media (min-width: 769px) {
+  .hero-poster-img {
+    position: absolute;
+    inset: 0;
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: none;
+  }
+}

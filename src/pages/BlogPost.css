@@ -443,3 +443,133 @@
     margin-left: 0 !important;
   }
 }
+
+/* Open Day Event Info Box Styles */
+.event-info-box {
+  background: linear-gradient(145deg, #ffffff 0%, #faf6ef 100%);
+  border: 2px solid #e8dfcf;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 24px rgba(164, 113, 27, 0.08);
+}
+
+.event-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid #e8dfcf;
+}
+
+.event-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.event-detail-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background-color: #f7ecd6;
+  color: #a4711b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-detail-item strong {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #718096;
+  margin-bottom: 2px;
+}
+
+.event-detail-item p {
+  margin: 0 !important;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 1.05rem !important;
+}
+
+.badge-free {
+  display: inline-block;
+  background-color: #e6f4ea;
+  color: #137333;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.event-contact-block {
+  margin-top: 1.5rem;
+}
+
+.event-contact-block h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.event-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.event-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #d1c5b0;
+  color: var(--text-main);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.event-contact-pill:hover {
+  background: #f7ecd6;
+  border-color: #a4711b;
+  color: #a4711b;
+  transform: translateY(-2px);
+}
+
+.event-contact-pill.whatsapp-pill {
+  background: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
+}
+
+.event-contact-pill.whatsapp-pill:hover {
+  background: #1eb956;
+  border-color: #1eb956;
+  color: #ffffff;
+}
+
+/* Post Featured Image */
+.post-featured-image-wrapper {
+  max-width: 860px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.post-featured-image {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+

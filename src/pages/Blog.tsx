@@ -5,6 +5,15 @@ import './Blog.css';
 const blogPosts = [
   {
     id: 1,
+    slug: 'open-day-ayurveda-milano-22-novembre-2026',
+    title: "Open Day Ayurveda a Milano: scopri il mondo dell’Ayurveda il 22 novembre 2026",
+    category: "Eventi & Formazione",
+    date: "22 Novembre 2026",
+    readTime: "5 min di lettura",
+    excerpt: "Partecipa all’Open Day Ayurveda a Milano domenica 22 novembre 2026. Scopri i corsi, i trattamenti e la filosofia ayurvedica di ARYAVEDA Academy. Prenota il tuo posto gratuito!"
+  },
+  {
+    id: 2,
     slug: 'perche-ayurveda-e-importante-nella-nostra-vita',
     title: "Perché l'Ayurveda è importante nella nostra vita? I benefici dell'Ayurveda per uno stile di vita sano",
     category: "Benessere & Stile di Vita",

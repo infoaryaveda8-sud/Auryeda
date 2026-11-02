@@ -6,12 +6,16 @@ import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import heroBannerWhatsApp from '../assets/WhatsApp Image 2026-10-27 at 1.03.49 PM.jpeg';
 import heroBannerTreatments from '../assets/ayurveda-hero-bg.jpg';
 import heroBannerShirodhara from '../assets/ayurveda-hero-therapy.jpg';
+import heroBannerOpenDay from '../assets/Open Day website.jpg.jpeg';
+import heroBannerOpenDayWide from '../assets/open-day-banner-wide.jpg';
 
 import './Hero.css';
 
 interface SlideData {
   id: number;
   image: string;
+  /** Optional wide (1920x700) version used on desktop */
+  wideImage?: string;
   subtitle: string;
   title: string;
   desc: string;
@@ -20,9 +24,24 @@ interface SlideData {
   secondaryBtnText: string;
   secondaryBtnLink: string;
   objectPosition?: string;
+  /** Poster slide: image already contains its own text — show it in full, no overlay/text, whole slide clickable */
+  isPoster?: boolean;
 }
 
 const slides: SlideData[] = [
+  {
+    id: 0,
+    image: heroBannerOpenDay,
+    wideImage: heroBannerOpenDayWide,
+    subtitle: 'Open Day',
+    title: "Open Day - Vieni a scoprire il mondo dell'Ayurveda",
+    desc: 'Domenica 22 Novembre, dalle ore 9:00 - Via Teocrito 50, Milano (MM1)',
+    primaryBtnText: 'Prenota il tuo posto',
+    primaryBtnLink: '/contact',
+    secondaryBtnText: '',
+    secondaryBtnLink: '',
+    isPoster: true
+  },
   {
     id: 1,
     image: heroBannerWhatsApp,
@@ -139,14 +158,38 @@ const Hero: React.FC = () => {
               className={`hero-slide ${isActive ? 'active' : ''}`}
               aria-hidden={!isActive}
             >
-              <img 
-                src={slide.image} 
-                alt={slide.title} 
-                className="hero-slide-bg"
-                style={{ objectPosition: slide.objectPosition || 'center center' }}
-                loading={index === 0 ? 'eager' : 'lazy'}
-              />
-              <div className="hero-slide-overlay"></div>
+              {slide.isPoster ? (
+                <Link
+                  to={slide.primaryBtnLink}
+                  className="hero-poster-link"
+                  tabIndex={isActive ? 0 : -1}
+                  aria-label={slide.primaryBtnText}
+                >
+                  <img src={slide.image} alt="" aria-hidden="true" className="hero-poster-blur" />
+                  <picture>
+                    {slide.wideImage && (
+                      <source media="(min-width: 769px)" srcSet={slide.wideImage} />
+                    )}
+                    <img
+                      src={slide.image}
+                      alt={`${slide.title}. ${slide.desc}`}
+                      className="hero-poster-img"
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                    />
+                  </picture>
+                </Link>
+              ) : (
+                <>
+                  <img 
+                    src={slide.image} 
+                    alt={slide.title} 
+                    className="hero-slide-bg"
+                    style={{ objectPosition: slide.objectPosition || 'center center' }}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                  />
+                  <div className="hero-slide-overlay"></div>
+                </>
+              )}
             </div>
           );
         })}
@@ -170,10 +213,10 @@ const Hero: React.FC = () => {
       </button>
 
       {/* Main Content Area */}
-      <div className="container hero-content-container">
+      <div className={`container hero-content-container ${slides[currentSlide].isPoster ? 'is-poster' : ''}`}>
         {slides.map((slide, index) => {
           const isActive = index === currentSlide;
-          if (!isActive) return null;
+          if (!isActive || slide.isPoster) return null;
 
           return (
             <div key={slide.id} className="hero-slide-content animate-hero-fade">

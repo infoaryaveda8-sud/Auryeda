@@ -51,6 +51,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/perche-ayurveda-e-importante-nella-nostra-vita" element={<BlogPost />} />
+          <Route path="/open-day-ayurveda-milano-22-novembre-2026" element={<BlogPost />} />
+          <Route path="/open-day-ayurveda-milano" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, User, ChevronLeft, ChevronDown, CheckCircle2, ArrowRight } from 'lucide-react';
+import BlogPostOpenDay from './BlogPostOpenDay';
 import './BlogPost.css';
 
 const faqs = [
@@ -27,6 +28,12 @@ const faqs = [
 ];
 
 const BlogPost = () => {
+  const { slug } = useParams<{ slug?: string }>();
+
+  if (slug === 'open-day-ayurveda-milano-22-novembre-2026' || slug === 'open-day-ayurveda-milano') {
+    return <BlogPostOpenDay />;
+  }
+
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   useEffect(() => {
