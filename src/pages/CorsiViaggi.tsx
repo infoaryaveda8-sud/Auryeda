@@ -112,7 +112,7 @@ const eventiData = [
     img: imgCertificates,
     date: 'Iscrizioni Aperte',
     desc: 'Il nostro corso di punta per diventare operatori ayurvedici certificati.',
-    link: 'https://corsimassaggiomilano.it/corso-ayurveda-tradizionale-a-livelli-con-attestato-2027-28/'
+    link: '/docs/Traditional-Ayurveda-Class-in-Milan.docx'
   }
 ];
 
