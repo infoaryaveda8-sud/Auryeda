@@ -150,16 +150,16 @@ const ReggioEmilia = () => {
                 <tr style={{ backgroundColor: 'rgba(148, 58, 57, 0.08)' }}>
                   <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>SECONDO ANNO - ACCADEMIA AYURVEDA ARYAVEDA</strong></td>
                 </tr>
-                <tr><td>30-31</td><td>GEN</td><td>2027</td><td>Pindasweda e Varianti e massaggio pranico</td></tr>
-                <tr><td>27-28</td><td>FEB</td><td>2027</td><td>Kalahari massage con i piedi. sequenze manuali per la circolazione Nala e Nadi Abhyangam riscaldanti e decontratturanti.</td></tr>
-                <tr><td>13-14</td><td>MAR</td><td>2027</td><td>Ahara, nutrizione ayurvedica base e Dietistica, Dietologia ayurvedica. Ricette e programmi</td></tr>
-                <tr><td>24-25</td><td>APR</td><td>2027</td><td>Anatomia del sistema linfatico. neerabhyangam, linfodrenaggio ayurvedico</td></tr>
-                <tr><td>22-23</td><td>MAG</td><td>2027</td><td>Tutti i tipi di vasti e netra .cataplasmi e impacchi</td></tr>
-                <tr><td>19-20</td><td>GIU</td><td>2027</td><td>Aromakhushbu Malish rituale con oli essenziali e studio degli oli essenziali teoria e pratica.</td></tr>
-                <tr><td>17-18</td><td>LUG</td><td>2027</td><td>Dravyaguna Vigyan: farmacologia ayurveda, studio delle preparazioni e arte dell'alchimia: il rasa shastra</td></tr>
-                <tr><td>11-12</td><td>SETT</td><td>2027</td><td>Studio dei punti vitali marma 2, tecnica marmabhyangam</td></tr>
-                <tr><td>16-17</td><td>OTT</td><td>2027</td><td>Riflessologia plantare ayurvedica olistica 2</td></tr>
-                <tr><td>20-21</td><td>NOV</td><td>2027</td><td>Muriabhyangam 2, manipolazioni articolare e sistema muscolo -scheletrico e principali malattie. Pratica e Test</td></tr>
+                <tr><td>30-31</td><td>GEN</td><td>2027</td><td>Pinda</td></tr>
+                <tr><td>27-28</td><td>FEB</td><td>2027</td><td>Kalahari (Natty)</td></tr>
+                <tr><td>13-14</td><td>MAR</td><td>2027</td><td>Ahara + Cucina</td></tr>
+                <tr><td>24-25</td><td>APR</td><td>2027</td><td>Linfo – Neer</td></tr>
+                <tr><td>22-23</td><td>MAG</td><td>2027</td><td>Vasti</td></tr>
+                <tr><td>19-20</td><td>GIU</td><td>2027</td><td>Aroma therapia</td></tr>
+                <tr><td>17-18</td><td>LUG</td><td>2027</td><td>Dravyaguna Erbo.</td></tr>
+                <tr><td>25-26</td><td>SETT</td><td>2027</td><td>Reflex-2</td></tr>
+                <tr><td>16-17</td><td>OTT</td><td>2027</td><td>Marma 2</td></tr>
+                <tr><td>20-21</td><td>NOV</td><td>2027</td><td>Muri 2</td></tr>
                 
                 <tr style={{ backgroundColor: 'rgba(148, 58, 57, 0.08)' }}>
                   <td colSpan={4} style={{ color: 'var(--primary)', fontSize: '1.1rem' }}><strong>MASTER TERZO ANNO - ACCADEMIA AYURVEDA ARYAVEDA</strong></td>
