@@ -23,16 +23,16 @@ const calendarioData = [
   {
     title: "2° ANNO (2027)",
     items: [
-      { date: "16-17 GEN 2027", desc: "PINDASWEDA & varianti + massaggio Pranico" },
-      { date: "13-14 FEB 2027", desc: "KALAHARI massage con i piedi. + sequenze manuali Nala e Nadi riscaldante post e decontratturante." },
-      { date: "13-14 MAR 2027", desc: "Ahara - Nutrizione ayurvedica base e dietetica. Ricette e programmi." },
-      { date: "17-18 APR 2027", desc: "Anatomia del sistema linfatico Neerabhyangam, linfodrenaggio ayurvedico." },
+      { date: "30-31 GEN 2027", desc: "PINDASWEDA & varianti + massaggio Pranico" },
+      { date: "27-28 FEB 2027", desc: "MIDHI-ABHYANGAM: KALAHARI massage con i piedi. + sequenze manuali Nala e Nadi riscaldante post e decontratturante." },
+      { date: "13-14 MAR 2027", desc: "Anatomia del sistema linfatico Neerabhyangam, linfodrenaggio ayurvedico." },
+      { date: "24-25 APR 2027", desc: "Ahara - Nutrizione ayurvedica base e dietetica. Ricette e programmi." },
       { date: "15-16 MAG 2027", desc: "Tutti tipi di Vasti e entra, cataplasmi e impacchi." },
       { date: "05-06 GIU 2027", desc: "AromaKhusbu Malish rituale con oli essenziali e studio degli oli essenziali." },
       { date: "03-04 LUG 2027", desc: "Dravyaguna Vigyana: farmacologia Ayurveda, studio delle preparazioni e rasa shastra." },
-      { date: "18-19 SET 2027", desc: "Studio dei punti vitali marma 2, tecnica marmabhyangam" },
-      { date: "16-17 OTT 2027", desc: "Riflessologia plantare ayurvedica olistica 2" },
-      { date: "20-21 NOV 2027", desc: "Muri Abhyangam -2, manipolazioni articolare e sistema muscolo-scheletrico." }
+      { date: "25-26 SET 2027", desc: "Riflessologia plantare ayurvedica olistica 2" },
+      { date: "23-24 OTT 2027", desc: "Muri Abhyangam -2, manipolazioni articolare e sistema muscolo-scheletrico." },
+      { date: "20-21 NOV 2027", desc: "Studio dei punti vitali marma 2, tecnica marmabhyangam" }
     ]
   },
   {
