@@ -4,6 +4,23 @@ import { MapPin, Calendar, Clock, Award, CheckCircle2, ChevronDown, BookOpen, He
 import './Milano.css';
 import schemaImg from '../assets/SCHEMA-TRIENNALE-AYURVEDA.jpg';
 
+const calendarioPrana = {
+  title: "PERCORSO 1° ANNO 2027 – NUOVO PERCORSO PRANA x Milano",
+  subtitle: "Calendario e Programma degli Incontri",
+  items: [
+    { date: "06-07 FEB 2027", desc: "Introduzione Ayurveda – Snehana 1" },
+    { date: "20-21 MAR 2027", desc: "Dosha, Subdosha – Snehana 2" },
+    { date: "10-11 APR 2027", desc: "Agni, Ama – Snehana 3" },
+    { date: "01-02 MAG 2027", desc: "Prakriti test – Snehana completo" },
+    { date: "12-13 GIU 2027", desc: "Vata / Pitta / Kapha 1" },
+    { date: "10-11 LUG 2027", desc: "VPK finish" },
+    { date: "25-26 SET 2027", desc: "Autunno – Panchakarma" },
+    { date: "23-24 OTT 2027", desc: "Riflessologia 1" },
+    { date: "20-21 NOV 2027", desc: "MURI 1" },
+    { date: "04-05 DIC 2027", desc: "Marma 1" }
+  ]
+};
+
 const calendarioData = [
   {
     title: "1° ANNO (2026)",
@@ -259,6 +276,22 @@ const Milano = () => {
           <h2 className="mi-section-title text-center">Calendario Date e Appuntamenti</h2>
           <div className="mi-divider center"></div>
           
+          <div className="mi-calendar-card" style={{ marginTop: '2.5rem', border: '2px solid var(--secondary)' }}>
+            <span style={{ display: 'inline-block', background: 'var(--secondary)', color: '#fff', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', padding: '0.35rem 0.9rem', borderRadius: '50px', marginBottom: '1rem' }}>
+              Nuovo percorso · Nuova classe da Febbraio 2027
+            </span>
+            <h3 style={{ color: 'var(--primary)', marginBottom: '0.25rem' }}>{calendarioPrana.title}</h3>
+            <p style={{ fontStyle: 'italic', color: 'var(--text-light)', marginBottom: '1.5rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '0.75rem' }}>{calendarioPrana.subtitle}</p>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              {calendarioPrana.items.map((item, i) => (
+                <li key={i} className="mi-calendar-item">
+                  <span className="mi-calendar-date">{item.date}</span>
+                  <span className="mi-calendar-desc">{item.desc}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3rem', marginTop: '2.5rem' }}>
             {calendarioData.map((anno, idx) => (
               <div key={idx} className="mi-calendar-card">
