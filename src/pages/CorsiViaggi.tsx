@@ -112,7 +112,7 @@ const eventiData = [
     img: imgCertificates,
     date: 'Iscrizioni Aperte',
     desc: 'Il nostro corso di punta per diventare operatori ayurvedici certificati.',
-    link: '/docs/Traditional-Ayurveda-Class-in-Milan.docx'
+    link: '/docs/Traditional-Ayurveda-Class-in-Milan.pdf'
   }
 ];
 
