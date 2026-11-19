@@ -65,7 +65,8 @@ const eventiData = [
     location: 'Milano, Italia',
     img: imgHeadMassage,
     date: '07-09 Agosto 2027',
-    desc: 'Intensivo pratico per operatori: approfondimento delle tecniche avanzate.'
+    desc: 'Intensivo pratico per operatori: approfondimento delle tecniche avanzate.',
+    link: '/docs/Training-Massaggio-Ayurvedico-Professionale.pdf'
   },
   {
     id: 6,
