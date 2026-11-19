@@ -1,0 +1,91 @@
+.cat-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cat-sedi {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.cat-sede-card {
+  background: #ffffff;
+  border: 1px solid #e8dfcf;
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.cat-sede-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.cat-sede-card p {
+  margin: 0 !important;
+}
+
+.cat-calendari {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.cat-cal-card {
+  background: linear-gradient(145deg, #ffffff 0%, #faf6ef 100%);
+  border: 2px solid #e8dfcf;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.cat-cal-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.cat-badge {
+  display: inline-block;
+  background-color: #e6f4ea;
+  color: #137333;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.cat-cal-card ol {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.cat-cal-card li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cat-plain-list {
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.cat-inline-img {
+  margin: 2rem 0;
+}

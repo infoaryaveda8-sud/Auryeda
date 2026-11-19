@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 import './CorsiViaggi.css';
 
@@ -26,7 +27,7 @@ const eventiData = [
     img: imgGroup1,
     date: 'Inizio Autunno 2026',
     desc: 'Formazione completa strutturata a moduli per apprendere le tecniche tradizionali ayurvediche.',
-    link: 'https://corsimassaggiomilano.it/corso-ayurveda-tradizionale-a-livelli-con-attestato-2027-28/'
+    route: '/corso-ayurveda-tradizionale'
   },
   {
     id: 2,
@@ -177,15 +178,10 @@ const CorsiViaggi = () => {
       {/* Grid Section */}
       <section className="cv-grid-section container">
         <div className="cv-grid">
-          {filteredEventi.map((evento, index) => (
-            <a 
-              href={(evento as any).link || (evento as any).pdf || "#dettagli"} 
-              target={(evento as any).link || (evento as any).pdf ? "_blank" : "_self"} 
-              rel="noopener noreferrer" 
-              className="cv-card cv-reveal" 
-              key={evento.id}
-              style={{ transitionDelay: `${(index % 3) * 100}ms`, textDecoration: 'none', color: 'inherit', display: 'block' }}
-            >
+          {filteredEventi.map((evento, index) => {
+            const cardStyle = { transitionDelay: `${(index % 3) * 100}ms`, textDecoration: 'none', color: 'inherit', display: 'block' };
+            const content = (
+              <>
               <div className="cv-card-img-wrap">
                 <img src={evento.img} alt={evento.title} className="cv-card-img" />
                 <div className="cv-card-badge">{evento.category}</div>
@@ -207,8 +203,29 @@ const CorsiViaggi = () => {
                   Scopri di più <ArrowRight size={16} className="cv-arrow-icon" />
                 </div>
               </div>
-            </a>
-          ))}
+              </>
+            );
+            const route = (evento as any).route;
+            if (route) {
+              return (
+                <Link to={route} className="cv-card cv-reveal" key={evento.id} style={cardStyle}>
+                  {content}
+                </Link>
+              );
+            }
+            return (
+              <a
+                href={(evento as any).link || (evento as any).pdf || "#dettagli"}
+                target={(evento as any).link || (evento as any).pdf ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                className="cv-card cv-reveal"
+                key={evento.id}
+                style={cardStyle}
+              >
+                {content}
+              </a>
+            );
+          })}
         </div>
         
         {filteredEventi.length === 0 && (
