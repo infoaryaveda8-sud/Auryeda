@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, User, ChevronLeft, ChevronDown, CheckCircle2, ArrowRight } from 'lucide-react';
 import BlogPostOpenDay from './BlogPostOpenDay';
+import BlogPostDosha from './BlogPostDosha';
 import './BlogPost.css';
 
 const faqs = [
@@ -32,6 +33,10 @@ const BlogPost = () => {
 
   if (slug === 'open-day-ayurveda-milano-22-novembre-2026' || slug === 'open-day-ayurveda-milano') {
     return <BlogPostOpenDay />;
+  }
+
+  if (slug === 'comprendere-i-tre-dosha-in-ayurveda' || slug === 'understanding-three-doshas-in-ayurveda') {
+    return <BlogPostDosha />;
   }
 
   const [openFaq, setOpenFaq] = useState<number | null>(0);

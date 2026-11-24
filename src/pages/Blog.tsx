@@ -4,6 +4,15 @@ import './Blog.css';
 
 const blogPosts = [
   {
+    id: 3,
+    slug: 'comprendere-i-tre-dosha-in-ayurveda',
+    title: "Comprendere i tre dosha in Ayurveda: Vata, Pitta e Kapha spiegati",
+    category: "Principi Ayurvedici",
+    date: "24 Novembre 2026",
+    readTime: "9 min di lettura",
+    excerpt: "Scopri i tre dosha in Ayurveda: Vata, Pitta e Kapha. Comprendi i loro significati tradizionali, gli elementi associati, le caratteristiche e il concetto di Prakriti nel benessere ayurvedico."
+  },
+  {
     id: 1,
     slug: 'open-day-ayurveda-milano-22-novembre-2026',
     title: "Open Day Ayurveda a Milano: scopri il mondo dell’Ayurveda il 22 novembre 2026",

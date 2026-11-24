@@ -573,3 +573,53 @@
   display: block;
 }
 
+
+/* ---- Dosha post: sub-headings, lists, comparison table ---- */
+.feature-content h4 {
+  font-family: var(--font-heading);
+  color: var(--secondary);
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.feature-content ul {
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.feature-content ul li {
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+}
+
+.dosha-table-wrapper {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid #f2e3cf;
+  border-radius: 12px;
+}
+
+.dosha-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.dosha-table th,
+.dosha-table td {
+  padding: 0.9rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #f2e3cf;
+}
+
+.dosha-table thead th {
+  background: linear-gradient(135deg, #fef9f3 0%, #fffdf9 100%);
+  font-family: var(--font-heading);
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.dosha-table tbody tr:last-child td {
+  border-bottom: none;
+}
