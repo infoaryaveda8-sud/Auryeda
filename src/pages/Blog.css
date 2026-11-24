@@ -52,7 +52,7 @@
 /* Grid Layout: Sits on the side with a natural width; when next blogs are added, they align next to it */
 .blog-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 420px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
   justify-content: start;
 }
@@ -146,6 +146,12 @@
 .read-article-link:hover {
   color: #a4711b;
   gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .blog-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
