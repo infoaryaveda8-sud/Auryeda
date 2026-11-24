@@ -4,6 +4,15 @@ import './Blog.css';
 
 const blogPosts = [
   {
+    id: 4,
+    slug: 'cos-e-il-panchakarma-in-ayurveda',
+    title: "Che cos'è il Panchakarma in Ayurveda? Benefici, tipi e la sua importanza",
+    category: "Trattamenti Ayurvedici",
+    date: "24 Novembre 2026",
+    readTime: "10 min di lettura",
+    excerpt: "Scopri cos'è il Panchakarma in Ayurveda: le sue cinque terapie tradizionali, le tre fasi del trattamento, i potenziali benefici e le precauzioni da conoscere prima di prenderlo in considerazione."
+  },
+  {
     id: 3,
     slug: 'comprendere-i-tre-dosha-in-ayurveda',
     title: "Comprendere i tre dosha in Ayurveda: Vata, Pitta e Kapha spiegati",

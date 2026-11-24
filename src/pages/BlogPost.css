@@ -623,3 +623,14 @@
 .dosha-table tbody tr:last-child td {
   border-bottom: none;
 }
+
+.integration-step ul {
+  margin: 0.25rem 0 0.75rem 1.25rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.integration-step ul li {
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+}

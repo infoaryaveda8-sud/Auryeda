@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, User, ChevronLeft, ChevronDown, CheckCircle2, ArrowRight } from 'lucide-react';
 import BlogPostOpenDay from './BlogPostOpenDay';
 import BlogPostDosha from './BlogPostDosha';
+import BlogPostPanchakarma from './BlogPostPanchakarma';
 import './BlogPost.css';
 
 const faqs = [
@@ -37,6 +38,10 @@ const BlogPost = () => {
 
   if (slug === 'comprendere-i-tre-dosha-in-ayurveda' || slug === 'understanding-three-doshas-in-ayurveda') {
     return <BlogPostDosha />;
+  }
+
+  if (slug === 'cos-e-il-panchakarma-in-ayurveda' || slug === 'what-is-panchakarma-in-ayurveda') {
+    return <BlogPostPanchakarma />;
   }
 
   const [openFaq, setOpenFaq] = useState<number | null>(0);
