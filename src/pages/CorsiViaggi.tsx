@@ -83,8 +83,8 @@ const eventiData = [
     category: 'Yoga',
     location: 'Centro Arya Veda',
     img: imgYoga,
-    date: '',
-    desc: '',
+    date: 'Lunedì · Martedì · Venerdì',
+    desc: 'Hatha Yoga tradizionale e Purna Yoga con l\'insegnante Mahakal. Lezioni mattina, pausa pranzo e sera, aperte a tutti i livelli.',
     route: '/hatha-yoga-nidra'
   },
   {
