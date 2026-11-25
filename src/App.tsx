@@ -7,6 +7,7 @@ import ChiSiamo from './pages/ChiSiamo';
 import CorsiViaggi from './pages/CorsiViaggi';
 import AccademiaAyurveda from './pages/AccademiaAyurveda';
 import CorsoAyurvedaTradizionale from './pages/CorsoAyurvedaTradizionale';
+import HathaYoga from './pages/HathaYoga';
 import Milano from './pages/Milano';
 import ReggioEmilia from './pages/locations/ReggioEmilia';
 import OperatoreOnline from './pages/OperatoreOnline';
@@ -41,6 +42,7 @@ function App() {
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/corsi-viaggi" element={<CorsiViaggi />} />
           <Route path="/corso-ayurveda-tradizionale" element={<CorsoAyurvedaTradizionale />} />
+          <Route path="/hatha-yoga-nidra" element={<HathaYoga />} />
           <Route path="/accademia" element={<AccademiaAyurveda />} />
           <Route path="/milano" element={<Milano />} />
           <Route path="/reggio-emilia" element={<ReggioEmilia />} />

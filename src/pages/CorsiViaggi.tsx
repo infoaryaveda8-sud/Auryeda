@@ -10,7 +10,7 @@ import imgMadurai from '../assets/madurai-temple-complex-600x387.jpeg';
 import imgTourIndia from '../assets/Tour-india-2026-agosto.jpeg';
 import imgHeadMassage from '../assets/1300094455_137677269_3-CORSO-RESIDENZIALE-DI-MASSAGGIO-AYURVEDICO-Altri-corsi-600x387.jpg';
 import imgBamboo from '../assets/Bamboo-massage-600x387.jpeg';
-import imgYoga from '../assets/mariele-carnevale-yoga-600x387.jpeg';
+import imgYoga from '../assets/mahakal-hatha-yoga.jpeg';
 import imgMichelangelo from '../assets/image-27-01-22-18-28-e1645054300407.jpg';
 import imgPanchakarma from '../assets/D94AD18B-8C1A-4947-B001-406B9FD9C691-600x387.jpg';
 import imgCertificates from '../assets/IMG_1911.jpg';
@@ -83,8 +83,9 @@ const eventiData = [
     category: 'Yoga',
     location: 'Centro Arya Veda',
     img: imgYoga,
-    date: 'Ogni Mercoledì',
-    desc: 'Pratica settimanale per riequilibrare corpo e mente attraverso posture e rilassamento profondo.'
+    date: '',
+    desc: '',
+    route: '/hatha-yoga-nidra'
   },
   {
     id: 8,
@@ -189,17 +190,19 @@ const CorsiViaggi = () => {
               </div>
               <div className="cv-card-body">
                 <div className="cv-card-meta">
-                  <span className="cv-meta-item">
-                    <Calendar size={14} />
-                    {evento.date}
-                  </span>
+                  {evento.date && (
+                    <span className="cv-meta-item">
+                      <Calendar size={14} />
+                      {evento.date}
+                    </span>
+                  )}
                   <span className="cv-meta-item">
                     <MapPin size={14} />
                     {evento.location}
                   </span>
                 </div>
                 <h3 className="cv-card-title">{evento.title}</h3>
-                <p className="cv-card-desc">{evento.desc}</p>
+                {evento.desc && <p className="cv-card-desc">{evento.desc}</p>}
                 <div className="cv-card-link">
                   Scopri di più <ArrowRight size={16} className="cv-arrow-icon" />
                 </div>

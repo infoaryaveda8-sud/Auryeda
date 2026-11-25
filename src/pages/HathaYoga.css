@@ -1,0 +1,33 @@
+.hy-teacher {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hy-teacher-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid #e8dfcf;
+  border-radius: 14px;
+  padding: 0.5rem;
+}
+
+.hy-slot-label {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .hy-teacher {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
